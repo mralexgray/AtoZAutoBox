@@ -1,6 +1,8 @@
 [submodule "REKit"]
 	path = REKit
 	url = https://github.com/mralexgray/REKit.git
+	ignore = dirty
 [submodule "MAObjCRuntime"]
 	path = MAObjCRuntime
 	url = https://github.com/mralexgray/MAObjCRuntime.git
+	ignore = dirty
