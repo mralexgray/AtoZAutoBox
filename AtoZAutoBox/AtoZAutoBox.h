@@ -1,24 +1,72 @@
-
 #import <objc/runtime.h>
+#import "NSObject+REResponder.h"
+#import "NSObject+REObserver.h"
+#import "REUtil.h"
+#import "NSObject+Primitives.h"
+#import "NSObject+DynamicProperties.h"
+#import <QuartzCore/QuartzCore.h>
 
-/** OVERVIEW **/
-/*  */
+//MAORuntime
+
+#import "MARTNSObject.h"
+#import "RTProtocol.h"
+#import "RTIvar.h"
+#import "RTProperty.h"
+#import "RTMethod.h"
+#import "RTUnregisteredClass.h"
+
+
+#define IS_OBJECT(T) _Generic( (T), id: YES, default: NO)
+
+//NSRect    a = (NSRect){1,2,3,4};	NSString* b = @"whatAmI?";	NSInteger c = 9;
+//
+//NSLog(@"%@", IS_OBJECT(a)?@"YES":@"NO"); // -> NO
+//NSLog(@"%@", IS_OBJECT(b)?@"YES":@"NO"); // -> YES
+//NSLog(@"%@", IS_OBJECT(c)?@"YES":@"NO"); // -> NO
+//
+#define IS_OBJECT(T) _Generic( (T), id: YES, default: NO)
+
+/* USAGE 	-   (id)   initWithCoder:(NSCoder*)d { return self = super.init ? decodeObject(_obj), self : nil; }
+				- (void) encodeWithCoder:(NSCoder*)c {                            encodeObject(_obj);             } */
+#define OBJC_STRINGIFY(_x_) 														  @#_x_
+#define AZEncode(_x_) 	[c  encodeObject:_x_ forKey:OBJC_STRINGIFY(_x_)]
+#define AZDecode(_x_)	_x_ = [d decodeObjectForKey:OBJC_STRINGIFY(_x_)]
+
+
+#define ISANOBJECT(_x_) _Generic( (_x_), id: YES, default: NO)
+
+#define ABOX AtoZAutoBox
+#define r__ return
+
+#define XX(z) LOG_EXPR(z)
+
+#define 	CCHAR const char*
+#define  AUTOBOX(_z_) ({ __typeof__(_z_) _x_ = _z_;	[AtoZAutoBox autoBoxType:@encode(__typeof__(_z_)) value:&_x_]; })
+
+/** OVERVIEW **/	/*  */
+
+void enumerateEncodings	(void(^block)(CCHAR));
+extern NSString* describeType	(CCHAR t);
+#define describeTypeOlacef(x) describeType(@encode(__typeof__(x)))
 
 @interface 		  		 AtoZAutoBox : NSObject
+@property   (strong)     NSString * typeCode;			// Secret identity.
 @property (readonly)     NSString * typeDescription;  // Just a "cute" description.
-@property (strong)       NSString * typeCode;			// Secret identity.
-@property (weak)	 				 id   value;  				// NSNumber / NSString / NSValue.
+@property     (weak)				 id   value;  				// NSNumber / NSString / NSValue.
+@property   (strong)				 id   blockResponder;
 @property (readonly) 		  BOOL   isAnObject;			// Based on type.
-@property (readonly) 	      SEL   boxer,
-											   unboxer;				// These are hardcoded by "type".
-- (void*) rawValue;
-+ (id) autoBoxType:(const char*)encoding
-		 		 value:(const void*)value;
+@property (readonly) 	      SEL   boxer,				// These are hardcoded by "type".
+											   unboxer;
+@property (readonly) void* rawValue;	//- (void*) rawValue;
+
+	+ (id) autoBoxType:(CCHAR)encoding value:(void*)value;
+@end
+@interface 				 	 NSObject 	(AtoZAutoBox)  	// Convenience for associating the box.
+@property (readwrite) AtoZAutoBox * box;
 @end
 
-@interface 				 	 NSObject 	(AtoZAutoBox)  	// Convenience for associating the box.
-@property (readwrite) AtoZAutoBox * box;																					@end
 
+#define PRIMTIVEPOINTER(_value_,_name_) __typeof__(_value_) _name_
 
 #define DESTRUCTIFIER(_x_) _Generic((_x_), 		 \
 	NSRect			: [NSValue valueWithRect:_x_], \
@@ -31,7 +79,6 @@
 	BOOL				: [NSNumber numberWithBool:_x_],					\
 	default			: DESTRUCTIFIER(_x_))
 
-#define   AUTOBOX(_z_)	[AtoZAutoBox autoBoxWith:@encode(__typeof__(_z_)) value:_z_]
 
 /// encoded:@encode(__typeof__(_z_))]]
 
@@ -86,13 +133,13 @@
 //FOUNDATION_EXPORT NSValue * AZVrect 	(NSRect rect);
 //FOUNDATION_EXPORT NSValue * AZVsize 	(NSSize size);
 //FOUNDATION_EXPORT NSValue * AZV3d	 	(CATransform3D t);
-//FOUNDATION_EXPORT NSValue * AZVrng	 	(NSRange rng);
+//FOUNDATION_EXPORT NSValue * AZVrng		(NSRange rng);
 
-//#define  AZVinstall(p) 	[NSVAL valueWithInstallStatus: p]
-//#define  	AZVposi(p) 	[NSVAL      valueWithPosition: p]
+#define  AZVinstall(p) 	[NSVAL valueWithInstallStatus: p]
+#define  	AZVposi(p) 	[NSVAL      valueWithPosition: p]
 //
-//#define 		  AZVpoints(x,y) 	[NSVAL 	valueWithPoint:NSMakePoint(x,y)]
-//#define AZVrectMake(x,y,w,h) 	[NSVAL 			 valueWithRect:NSMakeRect(x,y,w,h)]
+#define 		  AZVpoints(x,y) 	[NSVAL 	valueWithPoint:NSMakePoint(x,y)]
+#define AZVrectMake(x,y,w,h) 	[NSVAL 			 valueWithRect:NSMakeRect(x,y,w,h)]
 
 
 #define ddsprintf(FORMAT, ARGS... )  [NSString stringWithFormat: (FORMAT), ARGS]
@@ -102,13 +149,15 @@ NSString * DDToStringFromTypeAndValue(const char * typeCode, void * value);
 #define DDToNString(_X_) ({typeof(_X_) _Y_ = (_X_);\
     DDToStringFromTypeAndValue(@encode(typeof(_X_)), &_Y_);})
 
-#define IS_OBJECT(T) _Generic( (T), id: YES, default: NO)
-#define 	LOG_EXPR(_X_) 		do{	__typeof__(_X_) _Y_ = (_X_); NSS*_STR_;					\
-											const char * _TYPE_CODE_ = @encode(__typeof__(_X_));	\
-			(_STR_= DDToStringFromTypeAndValue(_TYPE_CODE_, &_Y_))							\
-			?	NSLog(@"%s = %@", #_X_, _STR_) 															\
-			:	NSLog(@"Unknown _TYPE_CODE_:\"%s\" for expr:%s in func:%s file:%s line:%d",\
-					_TYPE_CODE_, #_X_, __func__, __FILE__, __LINE__); }while (0)
+
+#define 	LOG_EXPR(_X_) 	({		    NSString* _STR_ = nil;										   	\
+										__typeof__(_X_) _Y_ = _X_; 											\
+	                             CCHAR _TYPE_CODE_ = @encode(__typeof__(_X_));					\
+																														\
+	(_STR_ = DDToStringFromTypeAndValue(_TYPE_CODE_, &_Y_))											\
+			 ?	NSLog(@"%s = %@", #_X_, _STR_) 																\
+			 :	NSLog(@"Unknown _TYPE_CODE_:\"%s\" for expr:%s in func:%s file:%s line:%d",	\
+													_TYPE_CODE_, #_X_, __func__, __FILE__, __LINE__); })
 
 
 #define 	AutoBox(_X_) 		do{	__typeof__(_X_) _Y_ = (_X_); NSS*_STR_;					\
@@ -125,10 +174,14 @@ NSString * DDToStringFromTypeAndValue(const char * typeCode, void * value);
 //			:	NSLog(@"Unknown _TYPE_CODE_:\"%s\" for expr:%s in func:%s file:%s line:%d",\
 //					_TYPE_CODE_, #_X_, __func__, __FILE__, __LINE__); }while (0)
 
+
+//#define AZPROPERTY(_TYPE_,_GETTER_,_SETTER_)
+
 /**
  .h		@interface UIView (DHStyleManager)			@property (nonatomic, copy) NSString* styleName;			@end
  .m		@implementation UIView (DHStyleManager)	ADD_DYNAMIC_PROPERTY(NSString*,styleName,setStyleName);	@end
  */
+
 #define ADD_DYNAMIC_PROPERTY(PROPERTY_TYPE,PROPERTY_NAME,SETTER_NAME) 	 												\
 																																				\
 @dynamic PROPERTY_NAME ; 																												\
