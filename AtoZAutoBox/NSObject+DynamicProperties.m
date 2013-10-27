@@ -2,9 +2,61 @@
 #import "NSObject+DynamicProperties.h"
 
 
+//@implementation NSObject (mAVFK)
+//-(NSMutableArray *) mAVFK { return  [self mutableArrayValueForKey:<#(NSString *)#>valueForKeyPath
+//]
+//@end
+
+
+@interface HigherOrderMessage : NSProxy {	//Class isa;
+	NSUInteger retainCount;
+	NSMethodSignature *(^methodSignatureForSelector)(SEL selector);
+	void (^forward)(NSInvocation*capture);
+}
+@end
+@implementation HigherOrderMessage
++ (id)HOMWithGetSignatureForSelector:(NSMethodSignature *(^)(SEL selector))_sig
+		 							  capture:(void (^)(NSInvocation *message))_forward	{
+	HigherOrderMessage *message =  [HigherOrderMessage alloc];		// class_createInstance(self, 0);
+	if (message) {		message -> methodSignatureForSelector 	= [_sig copy];
+							message -> forward 							= [_forward copy];
+							message -> retainCount 						= 1;
+	}
+	return message;
+}
+- (NSMethodSignature*) methodSignatureForSelector:(SEL)aSelector 						{	return methodSignatureForSelector(aSelector);	}
+- (void) forwardInvocation:(NSInvocation*)invocation 										{	forward(invocation);	}
+
+@end
+@implementation NSObject (HigherOrderMessage)
++ (BOOL) testIfResponds {
+	NSString *string = @"string";
+	NSMutableArray *array = [NSMutableArray array];
+	@try {
+		NSLog(@"%@", [string stringByAppendingString:string]);   // stringstring
+		NSLog(@"%@", [(NSString*)array stringByAppendingString:string]);  // -[__NSArrayM stringByAppendingString:]: unrecognized selector sent to instance
+	} @catch (NSException * e) {
+		NSLog(@"error: %@", e);
+		NSLog(@"now with ifResponds...");
+		NSLog(@"%@", [string.ifResponds stringByAppendingString:string]); // stringstring
+		NSLog(@"%@", [array.ifResponds stringByAppendingString:string]); // (null)
+		NSLog(@"%@", NSStringFromClass([array.ifResponds class]));  // HigherOrderMessage ( should maybe be nsarray, not sure )
+	}
+	return YES;
+}
+- (id) ifResponds 		{
+	return [HigherOrderMessage HOMWithGetSignatureForSelector:^(SEL selector) {
+		return [self methodSignatureForSelector:selector] ?: [NSMethodSignature signatureWithObjCTypes:"@@:"];
+	} capture:^(NSInvocation *mess) { [mess invokeWithTarget:([self respondsToSelector:mess.selector] ? self : nil)]; }];
+}
+@end
+
+
 @interface CPropertyFactory : NSObject
 @end
 @implementation CPropertyFactory
+
+//+ (instancetype) newKinda:(Class)k {	id newK = [[k alloc]init];  return (k*)newK;	}
 
 - (BOOL)configure:(Class)inClass getter:(PGETTER)inGetter setter:(PSETTER)inSetter error:(NSError * *)outError {
 
@@ -136,8 +188,6 @@
 
 @end
 
-
-
 //
 //  CPropertyFactory.m
 //  Test
@@ -168,4 +218,5 @@
 //  The views and conclusions contained in the software and documentation are those of the
 //  authors and should not be interpreted as representing official policies, either expressed
 //  or implied, of 2011 toxicsoftware.com.
+
 

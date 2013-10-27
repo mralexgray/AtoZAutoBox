@@ -1,39 +1,55 @@
 #import <objc/runtime.h>
-#import "NSObject+REResponder.h"
-#import "NSObject+REObserver.h"
-#import "REUtil.h"
+
+
 #import "NSObject+Primitives.h"
 #import "NSObject+DynamicProperties.h"
 #import <QuartzCore/QuartzCore.h>
 
 //MAORuntime
 
-#import "MARTNSObject.h"
-#import "RTProtocol.h"
-#import "RTIvar.h"
-#import "RTProperty.h"
-#import "RTMethod.h"
-#import "RTUnregisteredClass.h"
+
+#import "ObjcAssociatedObjectHelper/ObjcAssociatedObjectHelpers.h"
+#import "KVCTrampoline.h"
+
+#import "CollectionsKeyValueFiltering-osx/CollectionsKeyValueFiltering.h"
+
+#import "AZRuntimeAdditions.h"
+#import "AZBlockDescriptions.h"
 
 
-#define IS_OBJECT(T) _Generic( (T), id: YES, default: NO)
+//	http://www.mikeash.com/pyblog/friday-qa-2010-12-31-c-macro-tips-and-tricks.html
+//	Note that because __typeof__ is a purely compile-time construct, 
+//	the extra use of the macro parameters does not cause them to be evaluated twice. 
+//	You can use a similar trick to create a pointer to any value you want:
 
-//NSRect    a = (NSRect){1,2,3,4};	NSString* b = @"whatAmI?";	NSInteger c = 9;
-//
-//NSLog(@"%@", IS_OBJECT(a)?@"YES":@"NO"); // -> NO
-//NSLog(@"%@", IS_OBJECT(b)?@"YES":@"NO"); // -> YES
-//NSLog(@"%@", IS_OBJECT(c)?@"YES":@"NO"); // -> NO
-//
-#define IS_OBJECT(T) _Generic( (T), id: YES, default: NO)
+#define POINTERIZE(_x_) ((__typeof__(_x_) []){ _x_ })
 
-/* USAGE 	-   (id)   initWithCoder:(NSCoder*)d { return self = super.init ? decodeObject(_obj), self : nil; }
-				- (void) encodeWithCoder:(NSCoder*)c {                            encodeObject(_obj);             } */
+//	While this isn't very useful by itself, it can be a good building block to have. 
+//	For example, here's a macro which will automatically box any value into an NSValue object:
+
+#define BOX(_x_) [NSValue valueWithBytes: POINTERIZE(_x_) objCType: @encode(__typeof__(_x_))]
+
+
+// We often want to introspect something.  We always need to know if we are working with an ObjC object, or a primitive.
+
+#define IS_OBJECT(_x_) _Generic( (_x_), id: YES, default: NO)
+
+/* Exaples  of IS_OBJECT(_x_)...
+
+	 	NSRect    a = (NSRect){1,2,3,4};	 IS_OBJECT(a) ? @"YES" : @"NO" -> NO
+		NSString* b = @"whatAmI?";	       IS_OBJECT(b) ? @"YES" : @"NO" -> YES
+		NSInteger c = 9;						 IS_OBJECT(a) ? @"YES" : @"NO" -> NO   */
+
+
 #define OBJC_STRINGIFY(_x_) 														  @#_x_
 #define AZEncode(_x_) 	[c  encodeObject:_x_ forKey:OBJC_STRINGIFY(_x_)]
 #define AZDecode(_x_)	_x_ = [d decodeObjectForKey:OBJC_STRINGIFY(_x_)]
 
+/* USAGE 	
 
-#define ISANOBJECT(_x_) _Generic( (_x_), id: YES, default: NO)
+	-   (id)   initWithCoder:(NSCoder*)d { return self = super.init ? decodeObject(_obj), self : nil; }
+	- (void) encodeWithCoder:(NSCoder*)c {                            encodeObject(_obj);             } */
+
 
 #define ABOX AtoZAutoBox
 #define r__ return
@@ -42,6 +58,13 @@
 
 #define 	CCHAR const char*
 #define  AUTOBOX(_z_) ({ __typeof__(_z_) _x_ = _z_;	[AtoZAutoBox autoBoxType:@encode(__typeof__(_z_)) value:&_x_]; })
+
+#define DYNAMIC_CAST(_nme_,_val_,_kls_) 	\
+	  	Class k_ = _kls_;							\
+	 	id v_ = _val_; 							\
+    	k *_nme_ = (k*)(v_)
+
+//#define DYNAMIC_CAST(_nme_,_val_,_kls_)  _kls_ *_nme_ = (_kls_ *)_val_
 
 /** OVERVIEW **/	/*  */
 
@@ -99,8 +122,6 @@ extern NSString* describeType	(CCHAR t);
 */
 //#define OBJECTIFY(_x_)  ({	NSObject* _y_ = OBJECTIFIER(_x_);									\
 //	_y_.encodedEncoding = [NSString stringWithUTF8String:@encode(typeof(_x_))]; _y_; })
-
-
 
 //#define ENCODEINFO(_TYPE_, _ENCODE_SEL_, _DECODE_SEL_) @{@"type":NSString
 ///* Get the name of a type */
@@ -210,6 +231,4 @@ static char kProperty##PROPERTY_NAME; 																								\
 	}			\
 	else { objc_setAssociatedObject(self, &kProperty##PROPERTY_NAME , setVal, OBJC_ASSOCIATION_RETAIN_NONATOMIC ); }			\
 }
-
-
 

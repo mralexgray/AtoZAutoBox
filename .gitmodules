@@ -6,3 +6,12 @@
 	path = MAObjCRuntime
 	url = https://github.com/mralexgray/MAObjCRuntime.git
 	ignore = dirty
+[submodule "ObjcAssociatedObjectHelpers"]
+	path = ObjcAssociatedObjectHelpers
+	url = https://github.com/mralexgray/ObjcAssociatedObjectHelpers.git
+[submodule "KVCTrampoline"]
+	path = KVCTrampoline
+	url = https://github.com/mralexgray/KVCTrampoline.git
+[submodule "ObjcCollectionsKeyValueFiltering"]
+	path = ObjcCollectionsKeyValueFiltering
+	url = https://github.com/mralexgray/ObjcCollectionsKeyValueFiltering.git

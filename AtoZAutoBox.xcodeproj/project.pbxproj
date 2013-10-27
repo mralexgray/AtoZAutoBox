@@ -7,261 +7,337 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7B0F52DF177B8B120027FAA2 /* NSObject+REObserver.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B22759A1779BFFE002984AC /* NSObject+REObserver.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7B0F52E0177B8B1B0027FAA2 /* NSObject+REObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B22759B1779BFFE002984AC /* NSObject+REObserver.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		7B2275A31779BFFE002984AC /* NSObject+REResponder.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B22759C1779BFFE002984AC /* NSObject+REResponder.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7B2275A41779BFFE002984AC /* NSObject+REResponder.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B22759D1779BFFE002984AC /* NSObject+REResponder.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		7B2275A61779BFFE002984AC /* REUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B22759F1779BFFE002984AC /* REUtil.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7B2275A71779BFFE002984AC /* REUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B2275A01779BFFE002984AC /* REUtil.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		7B2275AA1779DE5D002984AC /* NSObject+Primitives.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B2275A91779DDFF002984AC /* NSObject+Primitives.m */; };
 		7B2275AB1779DE63002984AC /* NSObject+Primitives.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B2275A81779DDFF002984AC /* NSObject+Primitives.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7B2275AE177A11CA002984AC /* NSObject+DynamicProperties.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B2275AC177A11CA002984AC /* NSObject+DynamicProperties.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7B2275AF177A11CA002984AC /* NSObject+DynamicProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B2275AD177A11CA002984AC /* NSObject+DynamicProperties.m */; };
 		7B2A59FB1777933A00D5FE78 /* AtoZAutoBox.h in Headers */ = {isa = PBXBuildFile; fileRef = 7BC425591776799C00928201 /* AtoZAutoBox.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7B4C6BA1177BA67400CF1D50 /* REResponderLogicTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B4C6B97177BA67400CF1D50 /* REResponderLogicTests.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		7B4C6BA2177BA67400CF1D50 /* REObserverLogicTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B4C6B99177BA67400CF1D50 /* REObserverLogicTests.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		7B4C6BA3177BA67400CF1D50 /* REResponderARCLogicTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B4C6B9B177BA67400CF1D50 /* REResponderARCLogicTests.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		7B4C6BA4177BA67400CF1D50 /* RETestObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B4C6B9E177BA67400CF1D50 /* RETestObject.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		7B4C6BA5177BA67400CF1D50 /* REUtilLogicTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B4C6BA0177BA67400CF1D50 /* REUtilLogicTests.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		7BC425511776799C00928201 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BC425501776799C00928201 /* Cocoa.framework */; };
+		7B4B184C178D03860083DA68 /* KVCTrampoline.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B4B1826178D032E0083DA68 /* KVCTrampoline.m */; };
+		7B4B184D178D038A0083DA68 /* KVCTrampoline.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B4B1825178D032E0083DA68 /* KVCTrampoline.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7B78F64F180A670100515A10 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B78F64E180A670100515A10 /* XCTest.framework */; };
+		7B78F660180A671E00515A10 /* KVCTrampolineTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B4B182C178D032E0083DA68 /* KVCTrampolineTests.m */; };
+		7B78F661180A671E00515A10 /* AtoZAutoBoxTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BC4256D1776799D00928201 /* AtoZAutoBoxTests.m */; };
+		7B78F666180A688300515A10 /* libAtoZAutoBox.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BC4254D1776799C00928201 /* libAtoZAutoBox.a */; };
+		7B9A61BA181D69C900AEA909 /* libMAObjCRuntime.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B9D87F4181D34F400043489 /* libMAObjCRuntime.a */; };
+		7B9D8799181D1C0A00043489 /* libREKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B9D8782181D1ABC00043489 /* libREKit.a */; };
+		7B9D87CD181D1DB700043489 /* libObjcAssociatedObjectHelper.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B9D87CA181D1DA300043489 /* libObjcAssociatedObjectHelper.a */; };
+		7B9D87CF181D204100043489 /* libffi.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B9D87CE181D204100043489 /* libffi.dylib */; };
+		7B9D87E0181D220A00043489 /* libCollectionsKeyValueFiltering-osx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B9D87D9181D219700043489 /* libCollectionsKeyValueFiltering-osx.a */; };
 		7BC4255B1776799C00928201 /* AtoZAutoBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BC4255A1776799C00928201 /* AtoZAutoBox.m */; };
-		7BC425621776799D00928201 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BC425611776799D00928201 /* XCTest.framework */; };
-		7BC425631776799D00928201 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BC425501776799C00928201 /* Cocoa.framework */; };
-		7BC425661776799D00928201 /* libAtoZAutoBox.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BC4254D1776799C00928201 /* libAtoZAutoBox.a */; };
-		7BC4256C1776799D00928201 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7BC4256A1776799D00928201 /* InfoPlist.strings */; };
-		7BC4256E1776799D00928201 /* AtoZAutoBoxTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BC4256D1776799D00928201 /* AtoZAutoBoxTests.m */; };
-		7BCAFBED1788584F00650943 /* MARTNSObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 7BCAFBD71788584E00650943 /* MARTNSObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7BCAFBEE1788584F00650943 /* MARTNSObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCAFBD81788584E00650943 /* MARTNSObject.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		7BCAFBEF1788584F00650943 /* RTIvar.h in Headers */ = {isa = PBXBuildFile; fileRef = 7BCAFBDA1788584E00650943 /* RTIvar.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7BCAFBF01788584F00650943 /* RTIvar.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCAFBDB1788584E00650943 /* RTIvar.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		7BCAFBF11788584F00650943 /* RTMethod.h in Headers */ = {isa = PBXBuildFile; fileRef = 7BCAFBDC1788584E00650943 /* RTMethod.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7BCAFBF21788584F00650943 /* RTMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCAFBDD1788584E00650943 /* RTMethod.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		7BCAFBF31788584F00650943 /* RTProperty.h in Headers */ = {isa = PBXBuildFile; fileRef = 7BCAFBDE1788584E00650943 /* RTProperty.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7BCAFBF41788584F00650943 /* RTProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCAFBDF1788584E00650943 /* RTProperty.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		7BCAFBF51788584F00650943 /* RTProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 7BCAFBE01788584E00650943 /* RTProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7BCAFBF61788584F00650943 /* RTProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCAFBE11788584E00650943 /* RTProtocol.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		7BCAFBF71788584F00650943 /* RTUnregisteredClass.h in Headers */ = {isa = PBXBuildFile; fileRef = 7BCAFBE21788584E00650943 /* RTUnregisteredClass.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7BCAFBF81788584F00650943 /* RTUnregisteredClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCAFBE31788584E00650943 /* RTUnregisteredClass.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		7BD354CD177BAF8800A5C85C /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BD354CC177BAF8800A5C85C /* SenTestingKit.framework */; };
+		7BEBFCDD17D87AB8002221BC /* AZRuntimeAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 7BEBFCDB17D87AB7002221BC /* AZRuntimeAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7BEBFCDE17D87AB8002221BC /* AZRuntimeAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BEBFCDC17D87AB8002221BC /* AZRuntimeAdditions.m */; };
+		7BEBFCE417D87B2E002221BC /* AZBlockDescriptions.h in Headers */ = {isa = PBXBuildFile; fileRef = 7BEBFCE217D87B2E002221BC /* AZBlockDescriptions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7BEBFCE517D87B2E002221BC /* AZBlockDescriptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BEBFCE317D87B2E002221BC /* AZBlockDescriptions.m */; };
+		7BF6C94D18105D6300895A19 /* libAtoZSingleton.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BF6C94518105D4700895A19 /* libAtoZSingleton.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		7BC425641776799D00928201 /* PBXContainerItemProxy */ = {
+		7B78F659180A670100515A10 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 7BC425451776799C00928201 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 7BC4254C1776799C00928201;
 			remoteInfo = AtoZAutoBox;
 		};
-		7BCAFBFF1788584F00650943 /* PBXContainerItemProxy */ = {
+		7B9A61B8181D69BA00AEA909 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 7BCAFBE71788584E00650943 /* MAObjCRuntime.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 8DD76FA10486AA7600D96B5E;
+			containerPortal = 7B9D87E5181D34F300043489 /* MAObjCRuntime.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 7B5F1C871816C07600329B3E;
 			remoteInfo = MAObjCRuntime;
 		};
-		7BCAFC011788584F00650943 /* PBXContainerItemProxy */ = {
+		7B9D8748181D172800043489 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 7BCAFBE71788584E00650943 /* MAObjCRuntime.xcodeproj */;
+			containerPortal = 7B9D8743181D172700043489 /* Mac_REKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EBA420DB167DE1BE0052D11E;
+			remoteInfo = Mac_REKit;
+		};
+		7B9D874A181D172800043489 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B9D8743181D172700043489 /* Mac_REKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EBA42118167DE1F20052D11E;
+			remoteInfo = Mac_REKitLogicTests;
+		};
+		7B9D8781181D1ABC00043489 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B9D8743181D172700043489 /* Mac_REKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7B9D8751181D185F00043489;
+			remoteInfo = REKit;
+		};
+		7B9D878B181D1B9300043489 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B9D8784181D1B9200043489 /* ObjcAssociatedObjectHelpers.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 49AD1B5616C282A10061BDC1;
+			remoteInfo = ObjcAssociatedObjectHelpersLib;
+		};
+		7B9D878D181D1B9300043489 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B9D8784181D1B9200043489 /* ObjcAssociatedObjectHelpers.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4918B9AE168498F000D4EAC4;
+			remoteInfo = ObjcAssociatedObjectHelpersLibTests;
+		};
+		7B9D878F181D1B9300043489 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B9D8784181D1B9200043489 /* ObjcAssociatedObjectHelpers.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 49AD1B6716C2838C0061BDC1;
+			remoteInfo = ObjcAssociatedObjectHelpers;
+		};
+		7B9D8791181D1B9300043489 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B9D8784181D1B9200043489 /* ObjcAssociatedObjectHelpers.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 49AEF1591619FB2C009D9F9B;
+			remoteInfo = ObjcAssociatedObjectHelpersTests;
+		};
+		7B9D8796181D1BEA00043489 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B9D8743181D172700043489 /* Mac_REKit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 7B9D8750181D185F00043489;
+			remoteInfo = REKit;
+		};
+		7B9D87C9181D1DA300043489 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B9D8784181D1B9200043489 /* ObjcAssociatedObjectHelpers.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7B9D879F181D1D5000043489;
+			remoteInfo = ObjcAssociatedObjectHelper;
+		};
+		7B9D87CB181D1DA700043489 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B9D8784181D1B9200043489 /* ObjcAssociatedObjectHelpers.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 7B9D879E181D1D5000043489;
+			remoteInfo = ObjcAssociatedObjectHelper;
+		};
+		7B9D87D6181D219700043489 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B9D87D0181D219600043489 /* CollectionsKeyValueFiltering.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 37A80DEE150B8CE800B9B6E1;
+			remoteInfo = "CollectionsKeyValueFiltering-ios";
+		};
+		7B9D87D8181D219700043489 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B9D87D0181D219600043489 /* CollectionsKeyValueFiltering.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 37235E741662BCCB00F33BF1;
+			remoteInfo = "CollectionsKeyValueFiltering-osx";
+		};
+		7B9D87DA181D219700043489 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B9D87D0181D219600043489 /* CollectionsKeyValueFiltering.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 37A80DFE150B8CE800B9B6E1;
+			remoteInfo = CollectionsKeyValueFilteringTests;
+		};
+		7B9D87DE181D21FC00043489 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B9D87D0181D219600043489 /* CollectionsKeyValueFiltering.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 37235E731662BCCB00F33BF1;
+			remoteInfo = "CollectionsKeyValueFiltering-osx";
+		};
+		7B9D87ED181D34F400043489 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B9D87E5181D34F300043489 /* MAObjCRuntime.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8DD76FA10486AA7600D96B5E;
+			remoteInfo = MAObjCRuntime_Tests;
+		};
+		7B9D87EF181D34F400043489 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B9D87E5181D34F300043489 /* MAObjCRuntime.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 22A07AE215241A3B008A2A36;
 			remoteInfo = MAObjCRuntime_iOS;
 		};
-		7BCAFC031788584F00650943 /* PBXContainerItemProxy */ = {
+		7B9D87F1181D34F400043489 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 7BCAFBE71788584E00650943 /* MAObjCRuntime.xcodeproj */;
+			containerPortal = 7B9D87E5181D34F300043489 /* MAObjCRuntime.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 22A07AF115241A3B008A2A36;
 			remoteInfo = MAObjCRuntime_iOSTests;
 		};
+		7B9D87F3181D34F400043489 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B9D87E5181D34F300043489 /* MAObjCRuntime.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7B5F1C881816C07600329B3E;
+			remoteInfo = MAObjCRuntime;
+		};
+		7B9D87F5181D34F400043489 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B9D87E5181D34F300043489 /* MAObjCRuntime.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7B5F1C991816C07600329B3E;
+			remoteInfo = MAObjCRuntimeTests;
+		};
+		7BF6C94418105D4700895A19 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7BF6C93F18105D4500895A19 /* AtoZSingleton.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0A1F37481729A6C10003594D;
+			remoteInfo = AtoZSingleton;
+		};
+		7BF6C94618105D4700895A19 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7BF6C93F18105D4500895A19 /* AtoZSingleton.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0A1F375C1729A6C10003594D;
+			remoteInfo = AtoZSingletonTests;
+		};
+		7BF6C94B18105D5600895A19 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7BF6C93F18105D4500895A19 /* AtoZSingleton.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 0A1F37471729A6C10003594D;
+			remoteInfo = AtoZSingleton;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		7B2275851779B5A5002984AC /* Common.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Common.xcconfig; sourceTree = "<group>"; };
-		7B2275871779B5A5002984AC /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
-		7B2275881779B5A5002984AC /* Profile.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Profile.xcconfig; sourceTree = "<group>"; };
-		7B2275891779B5A5002984AC /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
-		7B22758A1779B5A5002984AC /* Test.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Test.xcconfig; sourceTree = "<group>"; };
-		7B22758C1779B5A5002984AC /* Application.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Application.xcconfig; sourceTree = "<group>"; };
-		7B22758D1779B5A5002984AC /* StaticLibrary.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = StaticLibrary.xcconfig; sourceTree = "<group>"; };
-		7B22758F1779B5A5002984AC /* iOS-Application.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "iOS-Application.xcconfig"; sourceTree = "<group>"; };
-		7B2275901779B5A5002984AC /* iOS-Base.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "iOS-Base.xcconfig"; sourceTree = "<group>"; };
-		7B2275911779B5A5002984AC /* iOS-StaticLibrary.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "iOS-StaticLibrary.xcconfig"; sourceTree = "<group>"; };
-		7B2275931779B5A5002984AC /* Mac-Application.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Mac-Application.xcconfig"; sourceTree = "<group>"; };
-		7B2275941779B5A5002984AC /* Mac-Base.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Mac-Base.xcconfig"; sourceTree = "<group>"; };
-		7B2275951779B5A5002984AC /* Mac-DynamicLibrary.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Mac-DynamicLibrary.xcconfig"; sourceTree = "<group>"; };
-		7B2275961779B5A5002984AC /* Mac-Framework.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Mac-Framework.xcconfig"; sourceTree = "<group>"; };
-		7B2275971779B5A5002984AC /* Mac-StaticLibrary.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Mac-StaticLibrary.xcconfig"; sourceTree = "<group>"; };
-		7B2275981779B5A5002984AC /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
-		7B22759A1779BFFE002984AC /* NSObject+REObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+REObserver.h"; sourceTree = "<group>"; };
-		7B22759B1779BFFE002984AC /* NSObject+REObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+REObserver.m"; sourceTree = "<group>"; };
-		7B22759C1779BFFE002984AC /* NSObject+REResponder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+REResponder.h"; sourceTree = "<group>"; };
-		7B22759D1779BFFE002984AC /* NSObject+REResponder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+REResponder.m"; sourceTree = "<group>"; };
-		7B22759E1779BFFE002984AC /* REKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REKit.h; sourceTree = "<group>"; };
-		7B22759F1779BFFE002984AC /* REUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REUtil.h; sourceTree = "<group>"; };
-		7B2275A01779BFFE002984AC /* REUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = REUtil.m; sourceTree = "<group>"; };
 		7B2275A81779DDFF002984AC /* NSObject+Primitives.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "NSObject+Primitives.h"; path = "AtoZAutoBox/NSObject+Primitives.h"; sourceTree = "<group>"; };
 		7B2275A91779DDFF002984AC /* NSObject+Primitives.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "NSObject+Primitives.m"; path = "AtoZAutoBox/NSObject+Primitives.m"; sourceTree = "<group>"; };
 		7B2275AC177A11CA002984AC /* NSObject+DynamicProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+DynamicProperties.h"; path = "AtoZAutoBox/NSObject+DynamicProperties.h"; sourceTree = "<group>"; };
 		7B2275AD177A11CA002984AC /* NSObject+DynamicProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+DynamicProperties.m"; path = "AtoZAutoBox/NSObject+DynamicProperties.m"; sourceTree = "<group>"; };
-		7B4C6B97177BA67400CF1D50 /* REResponderLogicTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = REResponderLogicTests.m; path = REKit/REKitLogicTests/REResponderLogicTests.m; sourceTree = SOURCE_ROOT; };
-		7B4C6B98177BA67400CF1D50 /* REObserverLogicTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = REObserverLogicTests.h; path = REKit/REKitLogicTests/REObserverLogicTests.h; sourceTree = SOURCE_ROOT; };
-		7B4C6B99177BA67400CF1D50 /* REObserverLogicTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = REObserverLogicTests.m; path = REKit/REKitLogicTests/REObserverLogicTests.m; sourceTree = SOURCE_ROOT; };
-		7B4C6B9A177BA67400CF1D50 /* REResponderARCLogicTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = REResponderARCLogicTests.h; path = REKit/REKitLogicTests/REResponderARCLogicTests.h; sourceTree = SOURCE_ROOT; };
-		7B4C6B9B177BA67400CF1D50 /* REResponderARCLogicTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = REResponderARCLogicTests.m; path = REKit/REKitLogicTests/REResponderARCLogicTests.m; sourceTree = SOURCE_ROOT; };
-		7B4C6B9C177BA67400CF1D50 /* REResponderLogicTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = REResponderLogicTests.h; path = REKit/REKitLogicTests/REResponderLogicTests.h; sourceTree = SOURCE_ROOT; };
-		7B4C6B9D177BA67400CF1D50 /* RETestObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RETestObject.h; path = REKit/REKitLogicTests/RETestObject.h; sourceTree = SOURCE_ROOT; };
-		7B4C6B9E177BA67400CF1D50 /* RETestObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RETestObject.m; path = REKit/REKitLogicTests/RETestObject.m; sourceTree = SOURCE_ROOT; };
-		7B4C6B9F177BA67400CF1D50 /* REUtilLogicTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = REUtilLogicTests.h; path = REKit/REKitLogicTests/REUtilLogicTests.h; sourceTree = SOURCE_ROOT; };
-		7B4C6BA0177BA67400CF1D50 /* REUtilLogicTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = REUtilLogicTests.m; path = REKit/REKitLogicTests/REUtilLogicTests.m; sourceTree = SOURCE_ROOT; };
+		7B3A15BF180C7EA600F63F4D /* Mac-StaticLibrary.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = "Mac-StaticLibrary.xcconfig"; path = "../../xcconfigs/Mac OS X/Mac-StaticLibrary.xcconfig"; sourceTree = "<group>"; };
+		7B4B1825178D032E0083DA68 /* KVCTrampoline.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KVCTrampoline.h; sourceTree = "<group>"; };
+		7B4B1826178D032E0083DA68 /* KVCTrampoline.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KVCTrampoline.m; sourceTree = "<group>"; };
+		7B4B182A178D032E0083DA68 /* README.mdown */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.mdown; sourceTree = "<group>"; };
+		7B4B182C178D032E0083DA68 /* KVCTrampolineTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = KVCTrampolineTests.m; path = ../KVCTrampoline/KVCTrampolineTests.m; sourceTree = "<group>"; };
+		7B78F642180A654600515A10 /* NSObject+AssociatedObjectTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+AssociatedObjectTests.m"; path = "ObjcAssociatedObjectHelpers/UnitTests/NSObject+AssociatedObjectTests.m"; sourceTree = SOURCE_ROOT; };
+		7B78F64C180A670000515A10 /* AtoZAutoBoxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AtoZAutoBoxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B78F64E180A670100515A10 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		7B9D8743181D172700043489 /* Mac_REKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Mac_REKit.xcodeproj; path = REKit/Mac_REKit/Mac_REKit.xcodeproj; sourceTree = "<group>"; };
+		7B9D8783181D1B7300043489 /* Test.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Test.xcconfig; path = REKit/Mac_REKit/Mac_REKitLogicTests/../../../../../xcconfigs/Base/Configurations/Test.xcconfig; sourceTree = SOURCE_ROOT; };
+		7B9D8784181D1B9200043489 /* ObjcAssociatedObjectHelpers.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ObjcAssociatedObjectHelpers.xcodeproj; path = ObjcAssociatedObjectHelpers/ObjcAssociatedObjectHelpers.xcodeproj; sourceTree = "<group>"; };
+		7B9D87CE181D204100043489 /* libffi.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libffi.dylib; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/lib/libffi.dylib; sourceTree = DEVELOPER_DIR; };
+		7B9D87D0181D219600043489 /* CollectionsKeyValueFiltering.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CollectionsKeyValueFiltering.xcodeproj; path = ObjcCollectionsKeyValueFiltering/CollectionsKeyValueFiltering.xcodeproj; sourceTree = "<group>"; };
+		7B9D87E1181D2E7600043489 /* AtoZAutoBoxTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AtoZAutoBoxTests-Prefix.pch"; sourceTree = "<group>"; };
+		7B9D87E5181D34F300043489 /* MAObjCRuntime.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MAObjCRuntime.xcodeproj; path = MAObjCRuntime/xcode/MAObjCRuntime.xcodeproj; sourceTree = "<group>"; };
+		7B9D880B181D5CD500043489 /* AssociatedObjectHelpers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AssociatedObjectHelpers.h; path = ObjcAssociatedObjectHelpers/ObjcAssociatedObjectHelpers/AssociatedObjectHelpers.h; sourceTree = "<group>"; };
 		7BC4254D1776799C00928201 /* libAtoZAutoBox.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAtoZAutoBox.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		7BC425501776799C00928201 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
-		7BC425531776799C00928201 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		7BC425541776799C00928201 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		7BC425551776799C00928201 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
-		7BC425581776799C00928201 /* AtoZAutoBox-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "AtoZAutoBox-Prefix.pch"; path = "../AtoZAutoBox/AtoZAutoBox-Prefix.pch"; sourceTree = "<group>"; };
 		7BC425591776799C00928201 /* AtoZAutoBox.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AtoZAutoBox.h; path = AtoZAutoBox/AtoZAutoBox.h; sourceTree = "<group>"; };
 		7BC4255A1776799C00928201 /* AtoZAutoBox.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AtoZAutoBox.m; path = AtoZAutoBox/AtoZAutoBox.m; sourceTree = "<group>"; };
-		7BC425601776799D00928201 /* AtoZAutoBoxTests.xctest */ = {isa = PBXFileReference; explicitFileType = folder; includeInIndex = 0; path = AtoZAutoBoxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		7BC425611776799D00928201 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		7BC425691776799D00928201 /* AtoZAutoBoxTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AtoZAutoBoxTests-Info.plist"; sourceTree = "<group>"; };
-		7BC4256B1776799D00928201 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7BC4256D1776799D00928201 /* AtoZAutoBoxTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AtoZAutoBoxTests.m; sourceTree = "<group>"; };
-		7BCAFBD51788584E00650943 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		7BCAFBD71788584E00650943 /* MARTNSObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MARTNSObject.h; sourceTree = "<group>"; };
-		7BCAFBD81788584E00650943 /* MARTNSObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MARTNSObject.m; sourceTree = "<group>"; };
-		7BCAFBD91788584E00650943 /* README.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.markdown; sourceTree = "<group>"; };
-		7BCAFBDA1788584E00650943 /* RTIvar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTIvar.h; sourceTree = "<group>"; };
-		7BCAFBDB1788584E00650943 /* RTIvar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTIvar.m; sourceTree = "<group>"; };
-		7BCAFBDC1788584E00650943 /* RTMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTMethod.h; sourceTree = "<group>"; };
-		7BCAFBDD1788584E00650943 /* RTMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTMethod.m; sourceTree = "<group>"; };
-		7BCAFBDE1788584E00650943 /* RTProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTProperty.h; sourceTree = "<group>"; };
-		7BCAFBDF1788584E00650943 /* RTProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTProperty.m; sourceTree = "<group>"; };
-		7BCAFBE01788584E00650943 /* RTProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTProtocol.h; sourceTree = "<group>"; };
-		7BCAFBE11788584E00650943 /* RTProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTProtocol.m; sourceTree = "<group>"; };
-		7BCAFBE21788584E00650943 /* RTUnregisteredClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTUnregisteredClass.h; sourceTree = "<group>"; };
-		7BCAFBE31788584E00650943 /* RTUnregisteredClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTUnregisteredClass.m; sourceTree = "<group>"; };
-		7BCAFBE71788584E00650943 /* MAObjCRuntime.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = MAObjCRuntime.xcodeproj; sourceTree = "<group>"; };
-		7BCAFBEA1788584F00650943 /* MAObjCRuntime_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAObjCRuntime_Prefix.pch; sourceTree = "<group>"; };
-		7BD354CC177BAF8800A5C85C /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		7BEBFCDB17D87AB7002221BC /* AZRuntimeAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AZRuntimeAdditions.h; path = AtoZAutoBox/AZRuntimeAdditions.h; sourceTree = "<group>"; };
+		7BEBFCDC17D87AB8002221BC /* AZRuntimeAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AZRuntimeAdditions.m; path = AtoZAutoBox/AZRuntimeAdditions.m; sourceTree = "<group>"; };
+		7BEBFCE217D87B2E002221BC /* AZBlockDescriptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AZBlockDescriptions.h; path = AtoZAutoBox/AZBlockDescriptions.h; sourceTree = "<group>"; };
+		7BEBFCE317D87B2E002221BC /* AZBlockDescriptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AZBlockDescriptions.m; path = AtoZAutoBox/AZBlockDescriptions.m; sourceTree = "<group>"; };
+		7BF6C93F18105D4500895A19 /* AtoZSingleton.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AtoZSingleton.xcodeproj; path = ../../../git/AtoZSingleton/AtoZSingleton.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		7B78F649180A670000515A10 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B78F666180A688300515A10 /* libAtoZAutoBox.a in Frameworks */,
+				7B78F64F180A670100515A10 /* XCTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7BC4254A1776799C00928201 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7BC425511776799C00928201 /* Cocoa.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		7BC4255D1776799D00928201 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7BD354CD177BAF8800A5C85C /* SenTestingKit.framework in Frameworks */,
-				7BC425631776799D00928201 /* Cocoa.framework in Frameworks */,
-				7BC425621776799D00928201 /* XCTest.framework in Frameworks */,
-				7BC425661776799D00928201 /* libAtoZAutoBox.a in Frameworks */,
+				7B9A61BA181D69C900AEA909 /* libMAObjCRuntime.a in Frameworks */,
+				7B9D87E0181D220A00043489 /* libCollectionsKeyValueFiltering-osx.a in Frameworks */,
+				7B9D87CF181D204100043489 /* libffi.dylib in Frameworks */,
+				7B9D87CD181D1DB700043489 /* libObjcAssociatedObjectHelper.a in Frameworks */,
+				7B9D8799181D1C0A00043489 /* libREKit.a in Frameworks */,
+				7BF6C94D18105D6300895A19 /* libAtoZSingleton.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		7B2275831779B5A5002984AC /* Configuration */ = {
+		7B4B1823178D032E0083DA68 /* KVCTrampoline */ = {
 			isa = PBXGroup;
 			children = (
-				7BC425581776799C00928201 /* AtoZAutoBox-Prefix.pch */,
-				7B2275841779B5A5002984AC /* Base */,
-				7B22758E1779B5A5002984AC /* iOS */,
-				7B2275921779B5A5002984AC /* Mac OS X */,
-				7B2275981779B5A5002984AC /* README.md */,
+				7B4B1825178D032E0083DA68 /* KVCTrampoline.h */,
+				7B4B1826178D032E0083DA68 /* KVCTrampoline.m */,
+				7B4B182A178D032E0083DA68 /* README.mdown */,
 			);
-			path = Configuration;
+			path = KVCTrampoline;
 			sourceTree = "<group>";
 		};
-		7B2275841779B5A5002984AC /* Base */ = {
+		7B9D8744181D172700043489 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7B2275851779B5A5002984AC /* Common.xcconfig */,
-				7B2275861779B5A5002984AC /* Configurations */,
-				7B22758B1779B5A5002984AC /* Targets */,
+				7B9D8749181D172800043489 /* Mac_REKit.app */,
+				7B9D874B181D172800043489 /* Mac_REKitLogicTests.octest */,
+				7B9D8782181D1ABC00043489 /* libREKit.a */,
 			);
-			path = Base;
+			name = Products;
 			sourceTree = "<group>";
 		};
-		7B2275861779B5A5002984AC /* Configurations */ = {
+		7B9D8785181D1B9200043489 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7B2275871779B5A5002984AC /* Debug.xcconfig */,
-				7B2275881779B5A5002984AC /* Profile.xcconfig */,
-				7B2275891779B5A5002984AC /* Release.xcconfig */,
-				7B22758A1779B5A5002984AC /* Test.xcconfig */,
+				7B9D878C181D1B9300043489 /* libObjcAssociatedObjectHelpersLib.a */,
+				7B9D878E181D1B9300043489 /* ObjcAssociatedObjectHelpersLibTests.octest */,
+				7B9D8790181D1B9300043489 /* ObjcAssociatedObjectHelpers.framework */,
+				7B9D8792181D1B9300043489 /* ObjcAssociatedObjectHelpersTests.xctest */,
+				7B9D87CA181D1DA300043489 /* libObjcAssociatedObjectHelper.a */,
 			);
-			path = Configurations;
+			name = Products;
 			sourceTree = "<group>";
 		};
-		7B22758B1779B5A5002984AC /* Targets */ = {
+		7B9D87D1181D219600043489 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7B22758C1779B5A5002984AC /* Application.xcconfig */,
-				7B22758D1779B5A5002984AC /* StaticLibrary.xcconfig */,
+				7B9D87D7181D219700043489 /* libCollectionsKeyValueFiltering-ios.a */,
+				7B9D87D9181D219700043489 /* libCollectionsKeyValueFiltering-osx.a */,
+				7B9D87DB181D219700043489 /* CollectionsKeyValueFilteringTests.octest */,
 			);
-			path = Targets;
+			name = Products;
 			sourceTree = "<group>";
 		};
-		7B22758E1779B5A5002984AC /* iOS */ = {
+		7B9D87E6181D34F300043489 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7B22758F1779B5A5002984AC /* iOS-Application.xcconfig */,
-				7B2275901779B5A5002984AC /* iOS-Base.xcconfig */,
-				7B2275911779B5A5002984AC /* iOS-StaticLibrary.xcconfig */,
+				7B9D87EE181D34F400043489 /* MAObjCRuntime */,
+				7B9D87F0181D34F400043489 /* libMAObjCRuntime_iOS.a */,
+				7B9D87F2181D34F400043489 /* MAObjCRuntime_iOSTests.octest */,
+				7B9D87F4181D34F400043489 /* libMAObjCRuntime.a */,
+				7B9D87F6181D34F400043489 /* MAObjCRuntimeTests.xctest */,
 			);
-			path = iOS;
-			sourceTree = "<group>";
-		};
-		7B2275921779B5A5002984AC /* Mac OS X */ = {
-			isa = PBXGroup;
-			children = (
-				7B2275931779B5A5002984AC /* Mac-Application.xcconfig */,
-				7B2275941779B5A5002984AC /* Mac-Base.xcconfig */,
-				7B2275951779B5A5002984AC /* Mac-DynamicLibrary.xcconfig */,
-				7B2275961779B5A5002984AC /* Mac-Framework.xcconfig */,
-				7B2275971779B5A5002984AC /* Mac-StaticLibrary.xcconfig */,
-			);
-			path = "Mac OS X";
-			sourceTree = "<group>";
-		};
-		7B2275991779BFFE002984AC /* REKit */ = {
-			isa = PBXGroup;
-			children = (
-				7B22759A1779BFFE002984AC /* NSObject+REObserver.h */,
-				7B22759B1779BFFE002984AC /* NSObject+REObserver.m */,
-				7B22759C1779BFFE002984AC /* NSObject+REResponder.h */,
-				7B22759D1779BFFE002984AC /* NSObject+REResponder.m */,
-				7B22759E1779BFFE002984AC /* REKit.h */,
-				7B22759F1779BFFE002984AC /* REUtil.h */,
-				7B2275A01779BFFE002984AC /* REUtil.m */,
-			);
-			name = REKit;
-			path = REKit/REKit;
+			name = Products;
 			sourceTree = "<group>";
 		};
 		7BC425441776799B00928201 = {
 			isa = PBXGroup;
 			children = (
+				7B9D87E5181D34F300043489 /* MAObjCRuntime.xcodeproj */,
+				7B9D87D0181D219600043489 /* CollectionsKeyValueFiltering.xcodeproj */,
+				7B9D87CE181D204100043489 /* libffi.dylib */,
+				7B9D880B181D5CD500043489 /* AssociatedObjectHelpers.h */,
+				7B9D8784181D1B9200043489 /* ObjcAssociatedObjectHelpers.xcodeproj */,
+				7B3A15BF180C7EA600F63F4D /* Mac-StaticLibrary.xcconfig */,
+				7B9D8743181D172700043489 /* Mac_REKit.xcodeproj */,
+				7BF6C93F18105D4500895A19 /* AtoZSingleton.xcodeproj */,
+				7B4B1823178D032E0083DA68 /* KVCTrampoline */,
 				7BC425591776799C00928201 /* AtoZAutoBox.h */,
 				7BC4255A1776799C00928201 /* AtoZAutoBox.m */,
-				7BCAFBD21788584E00650943 /* MAObjCRuntime */,
 				7B2275AC177A11CA002984AC /* NSObject+DynamicProperties.h */,
 				7B2275AD177A11CA002984AC /* NSObject+DynamicProperties.m */,
 				7B2275A81779DDFF002984AC /* NSObject+Primitives.h */,
 				7B2275A91779DDFF002984AC /* NSObject+Primitives.m */,
-				7B2275991779BFFE002984AC /* REKit */,
-				7B2275831779B5A5002984AC /* Configuration */,
+				7BEBFCDB17D87AB7002221BC /* AZRuntimeAdditions.h */,
+				7BEBFCDC17D87AB8002221BC /* AZRuntimeAdditions.m */,
+				7BEBFCE217D87B2E002221BC /* AZBlockDescriptions.h */,
+				7BEBFCE317D87B2E002221BC /* AZBlockDescriptions.m */,
 				7BC425671776799D00928201 /* AtoZAutoBoxTests */,
-				7BC4254F1776799C00928201 /* Frameworks */,
 				7BC4254E1776799C00928201 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -270,97 +346,30 @@
 			isa = PBXGroup;
 			children = (
 				7BC4254D1776799C00928201 /* libAtoZAutoBox.a */,
-				7BC425601776799D00928201 /* AtoZAutoBoxTests.xctest */,
+				7B78F64C180A670000515A10 /* AtoZAutoBoxTests.xctest */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		7BC4254F1776799C00928201 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				7BD354CC177BAF8800A5C85C /* SenTestingKit.framework */,
-				7BC425501776799C00928201 /* Cocoa.framework */,
-				7BC425611776799D00928201 /* XCTest.framework */,
-				7BC425521776799C00928201 /* Other Frameworks */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		7BC425521776799C00928201 /* Other Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				7BC425531776799C00928201 /* Foundation.framework */,
-				7BC425541776799C00928201 /* CoreData.framework */,
-				7BC425551776799C00928201 /* AppKit.framework */,
-			);
-			name = "Other Frameworks";
 			sourceTree = "<group>";
 		};
 		7BC425671776799D00928201 /* AtoZAutoBoxTests */ = {
 			isa = PBXGroup;
 			children = (
+				7B9D8783181D1B7300043489 /* Test.xcconfig */,
+				7B78F642180A654600515A10 /* NSObject+AssociatedObjectTests.m */,
+				7B4B182C178D032E0083DA68 /* KVCTrampolineTests.m */,
+				7B9D87E1181D2E7600043489 /* AtoZAutoBoxTests-Prefix.pch */,
 				7BC4256D1776799D00928201 /* AtoZAutoBoxTests.m */,
-				7B4C6B98177BA67400CF1D50 /* REObserverLogicTests.h */,
-				7B4C6B99177BA67400CF1D50 /* REObserverLogicTests.m */,
-				7B4C6B9A177BA67400CF1D50 /* REResponderARCLogicTests.h */,
-				7B4C6B9B177BA67400CF1D50 /* REResponderARCLogicTests.m */,
-				7B4C6B9C177BA67400CF1D50 /* REResponderLogicTests.h */,
-				7B4C6B97177BA67400CF1D50 /* REResponderLogicTests.m */,
-				7B4C6B9D177BA67400CF1D50 /* RETestObject.h */,
-				7B4C6B9E177BA67400CF1D50 /* RETestObject.m */,
-				7B4C6B9F177BA67400CF1D50 /* REUtilLogicTests.h */,
-				7B4C6BA0177BA67400CF1D50 /* REUtilLogicTests.m */,
-				7BC425681776799D00928201 /* Supporting Files */,
+				7BC425691776799D00928201 /* AtoZAutoBoxTests-Info.plist */,
+				7B78F64E180A670100515A10 /* XCTest.framework */,
 			);
 			path = AtoZAutoBoxTests;
 			sourceTree = "<group>";
 		};
-		7BC425681776799D00928201 /* Supporting Files */ = {
+		7BF6C94018105D4500895A19 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7BC425691776799D00928201 /* AtoZAutoBoxTests-Info.plist */,
-				7BC4256A1776799D00928201 /* InfoPlist.strings */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		7BCAFBD21788584E00650943 /* MAObjCRuntime */ = {
-			isa = PBXGroup;
-			children = (
-				7BCAFBD51788584E00650943 /* main.m */,
-				7BCAFBD71788584E00650943 /* MARTNSObject.h */,
-				7BCAFBD81788584E00650943 /* MARTNSObject.m */,
-				7BCAFBD91788584E00650943 /* README.markdown */,
-				7BCAFBDA1788584E00650943 /* RTIvar.h */,
-				7BCAFBDB1788584E00650943 /* RTIvar.m */,
-				7BCAFBDC1788584E00650943 /* RTMethod.h */,
-				7BCAFBDD1788584E00650943 /* RTMethod.m */,
-				7BCAFBDE1788584E00650943 /* RTProperty.h */,
-				7BCAFBDF1788584E00650943 /* RTProperty.m */,
-				7BCAFBE01788584E00650943 /* RTProtocol.h */,
-				7BCAFBE11788584E00650943 /* RTProtocol.m */,
-				7BCAFBE21788584E00650943 /* RTUnregisteredClass.h */,
-				7BCAFBE31788584E00650943 /* RTUnregisteredClass.m */,
-				7BCAFBE61788584E00650943 /* xcode */,
-			);
-			path = MAObjCRuntime;
-			sourceTree = "<group>";
-		};
-		7BCAFBE61788584E00650943 /* xcode */ = {
-			isa = PBXGroup;
-			children = (
-				7BCAFBE71788584E00650943 /* MAObjCRuntime.xcodeproj */,
-				7BCAFBEA1788584F00650943 /* MAObjCRuntime_Prefix.pch */,
-			);
-			path = xcode;
-			sourceTree = "<group>";
-		};
-		7BCAFBE81788584E00650943 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				7BCAFC001788584F00650943 /* MAObjCRuntime */,
-				7BCAFC021788584F00650943 /* libMAObjCRuntime_iOS.a */,
-				7BCAFC041788584F00650943 /* MAObjCRuntime_iOSTests.octest */,
+				7BF6C94518105D4700895A19 /* libAtoZSingleton.a */,
+				7BF6C94718105D4700895A19 /* AtoZSingletonTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -373,23 +382,35 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B2275AB1779DE63002984AC /* NSObject+Primitives.h in Headers */,
-				7B0F52DF177B8B120027FAA2 /* NSObject+REObserver.h in Headers */,
 				7B2275AE177A11CA002984AC /* NSObject+DynamicProperties.h in Headers */,
-				7B2275A31779BFFE002984AC /* NSObject+REResponder.h in Headers */,
-				7BCAFBF71788584F00650943 /* RTUnregisteredClass.h in Headers */,
-				7B2275A61779BFFE002984AC /* REUtil.h in Headers */,
-				7BCAFBF31788584F00650943 /* RTProperty.h in Headers */,
+				7B4B184D178D038A0083DA68 /* KVCTrampoline.h in Headers */,
 				7B2A59FB1777933A00D5FE78 /* AtoZAutoBox.h in Headers */,
-				7BCAFBF51788584F00650943 /* RTProtocol.h in Headers */,
-				7BCAFBF11788584F00650943 /* RTMethod.h in Headers */,
-				7BCAFBEF1788584F00650943 /* RTIvar.h in Headers */,
-				7BCAFBED1788584F00650943 /* MARTNSObject.h in Headers */,
+				7BEBFCDD17D87AB8002221BC /* AZRuntimeAdditions.h in Headers */,
+				7BEBFCE417D87B2E002221BC /* AZBlockDescriptions.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		7B78F64B180A670000515A10 /* AtoZAutoBoxTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7B78F65B180A670100515A10 /* Build configuration list for PBXNativeTarget "AtoZAutoBoxTests" */;
+			buildPhases = (
+				7B78F648180A670000515A10 /* Sources */,
+				7B78F649180A670000515A10 /* Frameworks */,
+				7B78F64A180A670000515A10 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7B78F65A180A670100515A10 /* PBXTargetDependency */,
+			);
+			name = AtoZAutoBoxTests;
+			productName = "AtoZAutoBox Tests";
+			productReference = 7B78F64C180A670000515A10 /* AtoZAutoBoxTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		7BC4254C1776799C00928201 /* AtoZAutoBox */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7BC425711776799D00928201 /* Build configuration list for PBXNativeTarget "AtoZAutoBox" */;
@@ -401,29 +422,16 @@
 			buildRules = (
 			);
 			dependencies = (
+				7B9A61B9181D69BA00AEA909 /* PBXTargetDependency */,
+				7B9D87DF181D21FC00043489 /* PBXTargetDependency */,
+				7B9D87CC181D1DA700043489 /* PBXTargetDependency */,
+				7B9D8797181D1BEA00043489 /* PBXTargetDependency */,
+				7BF6C94C18105D5600895A19 /* PBXTargetDependency */,
 			);
 			name = AtoZAutoBox;
 			productName = AtoZAutoBox;
 			productReference = 7BC4254D1776799C00928201 /* libAtoZAutoBox.a */;
 			productType = "com.apple.product-type.library.static";
-		};
-		7BC4255F1776799D00928201 /* AtoZAutoBoxTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 7BC425741776799D00928201 /* Build configuration list for PBXNativeTarget "AtoZAutoBoxTests" */;
-			buildPhases = (
-				7BC4255C1776799D00928201 /* Sources */,
-				7BC4255D1776799D00928201 /* Frameworks */,
-				7BC4255E1776799D00928201 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				7BC425651776799D00928201 /* PBXTargetDependency */,
-			);
-			name = AtoZAutoBoxTests;
-			productName = AtoZAutoBoxTests;
-			productReference = 7BC425601776799D00928201 /* AtoZAutoBoxTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -433,6 +441,11 @@
 			attributes = {
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Alex Gray";
+				TargetAttributes = {
+					7B78F64B180A670000515A10 = {
+						TestTargetID = 7BC4254C1776799C00928201;
+					};
+				};
 			};
 			buildConfigurationList = 7BC425481776799C00928201 /* Build configuration list for PBXProject "AtoZAutoBox" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -446,189 +459,280 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 7BCAFBE81788584E00650943 /* Products */;
-					ProjectRef = 7BCAFBE71788584E00650943 /* MAObjCRuntime.xcodeproj */;
+					ProductGroup = 7BF6C94018105D4500895A19 /* Products */;
+					ProjectRef = 7BF6C93F18105D4500895A19 /* AtoZSingleton.xcodeproj */;
+				},
+				{
+					ProductGroup = 7B9D87D1181D219600043489 /* Products */;
+					ProjectRef = 7B9D87D0181D219600043489 /* CollectionsKeyValueFiltering.xcodeproj */;
+				},
+				{
+					ProductGroup = 7B9D8744181D172700043489 /* Products */;
+					ProjectRef = 7B9D8743181D172700043489 /* Mac_REKit.xcodeproj */;
+				},
+				{
+					ProductGroup = 7B9D87E6181D34F300043489 /* Products */;
+					ProjectRef = 7B9D87E5181D34F300043489 /* MAObjCRuntime.xcodeproj */;
+				},
+				{
+					ProductGroup = 7B9D8785181D1B9200043489 /* Products */;
+					ProjectRef = 7B9D8784181D1B9200043489 /* ObjcAssociatedObjectHelpers.xcodeproj */;
 				},
 			);
 			projectRoot = "";
 			targets = (
 				7BC4254C1776799C00928201 /* AtoZAutoBox */,
-				7BC4255F1776799D00928201 /* AtoZAutoBoxTests */,
+				7B78F64B180A670000515A10 /* AtoZAutoBoxTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		7BCAFC001788584F00650943 /* MAObjCRuntime */ = {
+		7B9D8749181D172800043489 /* Mac_REKit.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = Mac_REKit.app;
+			remoteRef = 7B9D8748181D172800043489 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		7B9D874B181D172800043489 /* Mac_REKitLogicTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = Mac_REKitLogicTests.octest;
+			remoteRef = 7B9D874A181D172800043489 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		7B9D8782181D1ABC00043489 /* libREKit.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libREKit.a;
+			remoteRef = 7B9D8781181D1ABC00043489 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		7B9D878C181D1B9300043489 /* libObjcAssociatedObjectHelpersLib.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libObjcAssociatedObjectHelpersLib.a;
+			remoteRef = 7B9D878B181D1B9300043489 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		7B9D878E181D1B9300043489 /* ObjcAssociatedObjectHelpersLibTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ObjcAssociatedObjectHelpersLibTests.octest;
+			remoteRef = 7B9D878D181D1B9300043489 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		7B9D8790181D1B9300043489 /* ObjcAssociatedObjectHelpers.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ObjcAssociatedObjectHelpers.framework;
+			remoteRef = 7B9D878F181D1B9300043489 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		7B9D8792181D1B9300043489 /* ObjcAssociatedObjectHelpersTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ObjcAssociatedObjectHelpersTests.xctest;
+			remoteRef = 7B9D8791181D1B9300043489 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		7B9D87CA181D1DA300043489 /* libObjcAssociatedObjectHelper.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libObjcAssociatedObjectHelper.a;
+			remoteRef = 7B9D87C9181D1DA300043489 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		7B9D87D7181D219700043489 /* libCollectionsKeyValueFiltering-ios.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libCollectionsKeyValueFiltering-ios.a";
+			remoteRef = 7B9D87D6181D219700043489 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		7B9D87D9181D219700043489 /* libCollectionsKeyValueFiltering-osx.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libCollectionsKeyValueFiltering-osx.a";
+			remoteRef = 7B9D87D8181D219700043489 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		7B9D87DB181D219700043489 /* CollectionsKeyValueFilteringTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = CollectionsKeyValueFilteringTests.octest;
+			remoteRef = 7B9D87DA181D219700043489 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		7B9D87EE181D34F400043489 /* MAObjCRuntime */ = {
 			isa = PBXReferenceProxy;
 			fileType = "compiled.mach-o.executable";
 			path = MAObjCRuntime;
-			remoteRef = 7BCAFBFF1788584F00650943 /* PBXContainerItemProxy */;
+			remoteRef = 7B9D87ED181D34F400043489 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		7BCAFC021788584F00650943 /* libMAObjCRuntime_iOS.a */ = {
+		7B9D87F0181D34F400043489 /* libMAObjCRuntime_iOS.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = libMAObjCRuntime_iOS.a;
-			remoteRef = 7BCAFC011788584F00650943 /* PBXContainerItemProxy */;
+			remoteRef = 7B9D87EF181D34F400043489 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		7BCAFC041788584F00650943 /* MAObjCRuntime_iOSTests.octest */ = {
+		7B9D87F2181D34F400043489 /* MAObjCRuntime_iOSTests.octest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = MAObjCRuntime_iOSTests.octest;
-			remoteRef = 7BCAFC031788584F00650943 /* PBXContainerItemProxy */;
+			remoteRef = 7B9D87F1181D34F400043489 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		7B9D87F4181D34F400043489 /* libMAObjCRuntime.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libMAObjCRuntime.a;
+			remoteRef = 7B9D87F3181D34F400043489 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		7B9D87F6181D34F400043489 /* MAObjCRuntimeTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = MAObjCRuntimeTests.xctest;
+			remoteRef = 7B9D87F5181D34F400043489 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		7BF6C94518105D4700895A19 /* libAtoZSingleton.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libAtoZSingleton.a;
+			remoteRef = 7BF6C94418105D4700895A19 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		7BF6C94718105D4700895A19 /* AtoZSingletonTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = AtoZSingletonTests.xctest;
+			remoteRef = 7BF6C94618105D4700895A19 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
-		7BC4255E1776799D00928201 /* Resources */ = {
+		7B78F64A180A670000515A10 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7BC4256C1776799D00928201 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		7B78F648180A670000515A10 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B78F661180A671E00515A10 /* AtoZAutoBoxTests.m in Sources */,
+				7B78F660180A671E00515A10 /* KVCTrampolineTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7BC425491776799C00928201 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				7BC4255B1776799C00928201 /* AtoZAutoBox.m in Sources */,
 				7B2275AA1779DE5D002984AC /* NSObject+Primitives.m in Sources */,
+				7BEBFCE517D87B2E002221BC /* AZBlockDescriptions.m in Sources */,
 				7B2275AF177A11CA002984AC /* NSObject+DynamicProperties.m in Sources */,
-				7BCAFBF61788584F00650943 /* RTProtocol.m in Sources */,
-				7B2275A41779BFFE002984AC /* NSObject+REResponder.m in Sources */,
-				7B0F52E0177B8B1B0027FAA2 /* NSObject+REObserver.m in Sources */,
-				7BCAFBF21788584F00650943 /* RTMethod.m in Sources */,
-				7BCAFBF41788584F00650943 /* RTProperty.m in Sources */,
-				7BCAFBF01788584F00650943 /* RTIvar.m in Sources */,
-				7BCAFBF81788584F00650943 /* RTUnregisteredClass.m in Sources */,
-				7BCAFBEE1788584F00650943 /* MARTNSObject.m in Sources */,
-				7B2275A71779BFFE002984AC /* REUtil.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		7BC4255C1776799D00928201 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7BC4256E1776799D00928201 /* AtoZAutoBoxTests.m in Sources */,
-				7B4C6BA1177BA67400CF1D50 /* REResponderLogicTests.m in Sources */,
-				7B4C6BA2177BA67400CF1D50 /* REObserverLogicTests.m in Sources */,
-				7B4C6BA3177BA67400CF1D50 /* REResponderARCLogicTests.m in Sources */,
-				7B4C6BA4177BA67400CF1D50 /* RETestObject.m in Sources */,
-				7B4C6BA5177BA67400CF1D50 /* REUtilLogicTests.m in Sources */,
+				7BEBFCDE17D87AB8002221BC /* AZRuntimeAdditions.m in Sources */,
+				7B4B184C178D03860083DA68 /* KVCTrampoline.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		7BC425651776799D00928201 /* PBXTargetDependency */ = {
+		7B78F65A180A670100515A10 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 7BC4254C1776799C00928201 /* AtoZAutoBox */;
-			targetProxy = 7BC425641776799D00928201 /* PBXContainerItemProxy */;
+			targetProxy = 7B78F659180A670100515A10 /* PBXContainerItemProxy */;
+		};
+		7B9A61B9181D69BA00AEA909 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MAObjCRuntime;
+			targetProxy = 7B9A61B8181D69BA00AEA909 /* PBXContainerItemProxy */;
+		};
+		7B9D8797181D1BEA00043489 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = REKit;
+			targetProxy = 7B9D8796181D1BEA00043489 /* PBXContainerItemProxy */;
+		};
+		7B9D87CC181D1DA700043489 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ObjcAssociatedObjectHelper;
+			targetProxy = 7B9D87CB181D1DA700043489 /* PBXContainerItemProxy */;
+		};
+		7B9D87DF181D21FC00043489 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "CollectionsKeyValueFiltering-osx";
+			targetProxy = 7B9D87DE181D21FC00043489 /* PBXContainerItemProxy */;
+		};
+		7BF6C94C18105D5600895A19 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AtoZSingleton;
+			targetProxy = 7BF6C94B18105D5600895A19 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
-/* Begin PBXVariantGroup section */
-		7BC4256A1776799D00928201 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7BC4256B1776799D00928201 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
-		7BC4256F1776799D00928201 /* Debug */ = {
+		7B78F65C180A670100515A10 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7B2275871779B5A5002984AC /* Debug.xcconfig */;
+			baseConfigurationReference = 7B9D8783181D1B7300043489 /* Test.xcconfig */;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = NO;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = NO;
-				GCC_C_LANGUAGE_STANDARD = "compiler-default";
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AtoZAutoBoxTests/AtoZAutoBoxTests-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
-				GCC_VERSION = "";
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
+				INFOPLIST_FILE = "AtoZAutoBoxTests/AtoZAutoBoxTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		7B78F65D180A670100515A10 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AtoZAutoBoxTests/AtoZAutoBoxTests-Prefix.pch";
+				INFOPLIST_FILE = "AtoZAutoBoxTests/AtoZAutoBoxTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+		7BC4256F1776799D00928201 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
 			};
 			name = Debug;
 		};
 		7BC425701776799D00928201 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = NO;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = YES;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				GCC_C_LANGUAGE_STANDARD = "compiler-default";
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
 		7BC425721776799D00928201 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7B2275971779B5A5002984AC /* Mac-StaticLibrary.xcconfig */;
+			baseConfigurationReference = 7B3A15BF180C7EA600F63F4D /* Mac-StaticLibrary.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				GCC_C_LANGUAGE_STANDARD = c11;
+				GCC_PREFIX_HEADER = "$(AZPREFIX)";
 				PRODUCT_NAME = AtoZAutoBox;
 			};
 			name = Debug;
@@ -636,53 +740,23 @@
 		7BC425731776799D00928201 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				GCC_C_LANGUAGE_STANDARD = c11;
+				GCC_PREFIX_HEADER = "$(AZPREFIX)";
 				PRODUCT_NAME = AtoZAutoBox;
-			};
-			name = Release;
-		};
-		7BC425751776799D00928201 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(inherited)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "AtoZAutoBox/AtoZAutoBox-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "AtoZAutoBoxTests/AtoZAutoBoxTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		7BC425761776799D00928201 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(inherited)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "AtoZAutoBox/AtoZAutoBox-Prefix.pch";
-				INFOPLIST_FILE = "AtoZAutoBoxTests/AtoZAutoBoxTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		7B78F65B180A670100515A10 /* Build configuration list for PBXNativeTarget "AtoZAutoBoxTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7B78F65C180A670100515A10 /* Debug */,
+				7B78F65D180A670100515A10 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		7BC425481776799C00928201 /* Build configuration list for PBXProject "AtoZAutoBox" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -697,15 +771,6 @@
 			buildConfigurations = (
 				7BC425721776799D00928201 /* Debug */,
 				7BC425731776799D00928201 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		7BC425741776799D00928201 /* Build configuration list for PBXNativeTarget "AtoZAutoBoxTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				7BC425751776799D00928201 /* Debug */,
-				7BC425761776799D00928201 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

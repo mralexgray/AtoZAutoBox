@@ -3,6 +3,10 @@
 #import <objc/runtime.h>
 
 
+//@interface NSObject (mAVFK)
+//@property (nonatomic) NSMutableArray *mAVFK;
+//@end
+
 #define SIMPLE_GETTER(T, T2) ^(id _self)         { return ([inGetter(_self, thePropertyName) T ## Value]); };
 #define SIMPLE_SETTER(T, T2) ^(id _self, T value){ inSetter(_self, thePropertyName, [NSNumber numberWith ## T2:value]); };
 #define STRUCT_GETTER(T)     ^(id _self) 			 { T value; [inGetter(_self, thePropertyName) getValue:&value]; return (value); };
@@ -22,6 +26,8 @@
 
 @interface NSObject (DynamicProperties)
 
+//+ (instancetype) newKinda:(Class)k;
+
 + (NSArray*) dynamicPropertyNames;
 //+ (BOOL)addCatchallPropertyWithGet	terAndSetter:(id(^)(id _self, NSString*key))getter,...;
 
@@ -36,3 +42,24 @@
 	       	 getter:(  id(^)(id _self, NSString*key))g
 			 	 setter:(void(^)(id _self, NSString*key, id value))s;
 @end
+
+/*	CLANG_IGNORE(-Wuninitialized);
+	Shady Shit
+	CLANG_POP;
+*/
+
+#define CLANG_IGNORE_HELPER0(x) #x
+#define CLANG_IGNORE_HELPER1(x) CLANG_IGNORE_HELPER0(clang diagnostic ignored x)
+#define CLANG_IGNORE_HELPER2(y) CLANG_IGNORE_HELPER1(#y)
+#define CLANG_POP _Pragma("clang diagnostic pop")
+#define CLANG_IGNORE(x)\
+	_Pragma("clang diagnostic push");\
+	_Pragma(CLANG_IGNORE_HELPER2(x))
+
+@interface NSObject (HigherOrderMessage)
+
++ (BOOL) testIfResponds;
+- (id) ifResponds;
+
+@end
+
