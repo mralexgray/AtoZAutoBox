@@ -19,10 +19,9 @@
 		7B78F661180A671E00515A10 /* AtoZAutoBoxTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BC4256D1776799D00928201 /* AtoZAutoBoxTests.m */; };
 		7B78F666180A688300515A10 /* libAtoZAutoBox.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BC4254D1776799C00928201 /* libAtoZAutoBox.a */; };
 		7B9A61BA181D69C900AEA909 /* libMAObjCRuntime.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B9D87F4181D34F400043489 /* libMAObjCRuntime.a */; };
+		7B9A61DB181D826900AEA909 /* libCollectionsKeyValueFilteringX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B9A61D6181D825800AEA909 /* libCollectionsKeyValueFilteringX.a */; };
 		7B9D8799181D1C0A00043489 /* libREKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B9D8782181D1ABC00043489 /* libREKit.a */; };
 		7B9D87CD181D1DB700043489 /* libObjcAssociatedObjectHelper.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B9D87CA181D1DA300043489 /* libObjcAssociatedObjectHelper.a */; };
-		7B9D87CF181D204100043489 /* libffi.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B9D87CE181D204100043489 /* libffi.dylib */; };
-		7B9D87E0181D220A00043489 /* libCollectionsKeyValueFiltering-osx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B9D87D9181D219700043489 /* libCollectionsKeyValueFiltering-osx.a */; };
 		7BC4255B1776799C00928201 /* AtoZAutoBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BC4255A1776799C00928201 /* AtoZAutoBox.m */; };
 		7BEBFCDD17D87AB8002221BC /* AZRuntimeAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 7BEBFCDB17D87AB7002221BC /* AZRuntimeAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7BEBFCDE17D87AB8002221BC /* AZRuntimeAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BEBFCDC17D87AB8002221BC /* AZRuntimeAdditions.m */; };
@@ -45,6 +44,34 @@
 			proxyType = 1;
 			remoteGlobalIDString = 7B5F1C871816C07600329B3E;
 			remoteInfo = MAObjCRuntime;
+		};
+		7B9A61D3181D825800AEA909 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B9A61CD181D825800AEA909 /* CollectionsKeyValueFiltering.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 37A80DEE150B8CE800B9B6E1;
+			remoteInfo = "CollectionsKeyValueFiltering-ios";
+		};
+		7B9A61D5181D825800AEA909 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B9A61CD181D825800AEA909 /* CollectionsKeyValueFiltering.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 37235E741662BCCB00F33BF1;
+			remoteInfo = CollectionsKeyValueFilteringX;
+		};
+		7B9A61D7181D825800AEA909 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B9A61CD181D825800AEA909 /* CollectionsKeyValueFiltering.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 37A80DFE150B8CE800B9B6E1;
+			remoteInfo = CollectionsKeyValueFilteringTests;
+		};
+		7B9A61D9181D825E00AEA909 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B9A61CD181D825800AEA909 /* CollectionsKeyValueFiltering.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 37235E731662BCCB00F33BF1;
+			remoteInfo = CollectionsKeyValueFilteringX;
 		};
 		7B9D8748181D172800043489 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -115,34 +142,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = 7B9D879E181D1D5000043489;
 			remoteInfo = ObjcAssociatedObjectHelper;
-		};
-		7B9D87D6181D219700043489 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7B9D87D0181D219600043489 /* CollectionsKeyValueFiltering.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 37A80DEE150B8CE800B9B6E1;
-			remoteInfo = "CollectionsKeyValueFiltering-ios";
-		};
-		7B9D87D8181D219700043489 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7B9D87D0181D219600043489 /* CollectionsKeyValueFiltering.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 37235E741662BCCB00F33BF1;
-			remoteInfo = "CollectionsKeyValueFiltering-osx";
-		};
-		7B9D87DA181D219700043489 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7B9D87D0181D219600043489 /* CollectionsKeyValueFiltering.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 37A80DFE150B8CE800B9B6E1;
-			remoteInfo = CollectionsKeyValueFilteringTests;
-		};
-		7B9D87DE181D21FC00043489 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7B9D87D0181D219600043489 /* CollectionsKeyValueFiltering.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 37235E731662BCCB00F33BF1;
-			remoteInfo = "CollectionsKeyValueFiltering-osx";
 		};
 		7B9D87ED181D34F400043489 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -215,11 +214,11 @@
 		7B78F642180A654600515A10 /* NSObject+AssociatedObjectTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+AssociatedObjectTests.m"; path = "ObjcAssociatedObjectHelpers/UnitTests/NSObject+AssociatedObjectTests.m"; sourceTree = SOURCE_ROOT; };
 		7B78F64C180A670000515A10 /* AtoZAutoBoxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AtoZAutoBoxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B78F64E180A670100515A10 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		7B9A61CD181D825800AEA909 /* CollectionsKeyValueFiltering.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CollectionsKeyValueFiltering.xcodeproj; path = ObjcCollectionsKeyValueFiltering/CollectionsKeyValueFiltering.xcodeproj; sourceTree = "<group>"; };
 		7B9D8743181D172700043489 /* Mac_REKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Mac_REKit.xcodeproj; path = REKit/Mac_REKit/Mac_REKit.xcodeproj; sourceTree = "<group>"; };
 		7B9D8783181D1B7300043489 /* Test.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Test.xcconfig; path = REKit/Mac_REKit/Mac_REKitLogicTests/../../../../../xcconfigs/Base/Configurations/Test.xcconfig; sourceTree = SOURCE_ROOT; };
 		7B9D8784181D1B9200043489 /* ObjcAssociatedObjectHelpers.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ObjcAssociatedObjectHelpers.xcodeproj; path = ObjcAssociatedObjectHelpers/ObjcAssociatedObjectHelpers.xcodeproj; sourceTree = "<group>"; };
 		7B9D87CE181D204100043489 /* libffi.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libffi.dylib; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/lib/libffi.dylib; sourceTree = DEVELOPER_DIR; };
-		7B9D87D0181D219600043489 /* CollectionsKeyValueFiltering.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CollectionsKeyValueFiltering.xcodeproj; path = ObjcCollectionsKeyValueFiltering/CollectionsKeyValueFiltering.xcodeproj; sourceTree = "<group>"; };
 		7B9D87E1181D2E7600043489 /* AtoZAutoBoxTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AtoZAutoBoxTests-Prefix.pch"; sourceTree = "<group>"; };
 		7B9D87E5181D34F300043489 /* MAObjCRuntime.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MAObjCRuntime.xcodeproj; path = MAObjCRuntime/xcode/MAObjCRuntime.xcodeproj; sourceTree = "<group>"; };
 		7B9D880B181D5CD500043489 /* AssociatedObjectHelpers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AssociatedObjectHelpers.h; path = ObjcAssociatedObjectHelpers/ObjcAssociatedObjectHelpers/AssociatedObjectHelpers.h; sourceTree = "<group>"; };
@@ -249,9 +248,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B9A61DB181D826900AEA909 /* libCollectionsKeyValueFilteringX.a in Frameworks */,
 				7B9A61BA181D69C900AEA909 /* libMAObjCRuntime.a in Frameworks */,
-				7B9D87E0181D220A00043489 /* libCollectionsKeyValueFiltering-osx.a in Frameworks */,
-				7B9D87CF181D204100043489 /* libffi.dylib in Frameworks */,
 				7B9D87CD181D1DB700043489 /* libObjcAssociatedObjectHelper.a in Frameworks */,
 				7B9D8799181D1C0A00043489 /* libREKit.a in Frameworks */,
 				7BF6C94D18105D6300895A19 /* libAtoZSingleton.a in Frameworks */,
@@ -269,6 +267,16 @@
 				7B4B182A178D032E0083DA68 /* README.mdown */,
 			);
 			path = KVCTrampoline;
+			sourceTree = "<group>";
+		};
+		7B9A61CE181D825800AEA909 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7B9A61D4181D825800AEA909 /* libCollectionsKeyValueFiltering-ios.a */,
+				7B9A61D6181D825800AEA909 /* libCollectionsKeyValueFilteringX.a */,
+				7B9A61D8181D825800AEA909 /* CollectionsKeyValueFilteringTests.octest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		7B9D8744181D172700043489 /* Products */ = {
@@ -293,16 +301,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		7B9D87D1181D219600043489 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				7B9D87D7181D219700043489 /* libCollectionsKeyValueFiltering-ios.a */,
-				7B9D87D9181D219700043489 /* libCollectionsKeyValueFiltering-osx.a */,
-				7B9D87DB181D219700043489 /* CollectionsKeyValueFilteringTests.octest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		7B9D87E6181D34F300043489 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -318,8 +316,8 @@
 		7BC425441776799B00928201 = {
 			isa = PBXGroup;
 			children = (
+				7B9A61CD181D825800AEA909 /* CollectionsKeyValueFiltering.xcodeproj */,
 				7B9D87E5181D34F300043489 /* MAObjCRuntime.xcodeproj */,
-				7B9D87D0181D219600043489 /* CollectionsKeyValueFiltering.xcodeproj */,
 				7B9D87CE181D204100043489 /* libffi.dylib */,
 				7B9D880B181D5CD500043489 /* AssociatedObjectHelpers.h */,
 				7B9D8784181D1B9200043489 /* ObjcAssociatedObjectHelpers.xcodeproj */,
@@ -422,8 +420,8 @@
 			buildRules = (
 			);
 			dependencies = (
+				7B9A61DA181D825E00AEA909 /* PBXTargetDependency */,
 				7B9A61B9181D69BA00AEA909 /* PBXTargetDependency */,
-				7B9D87DF181D21FC00043489 /* PBXTargetDependency */,
 				7B9D87CC181D1DA700043489 /* PBXTargetDependency */,
 				7B9D8797181D1BEA00043489 /* PBXTargetDependency */,
 				7BF6C94C18105D5600895A19 /* PBXTargetDependency */,
@@ -463,8 +461,8 @@
 					ProjectRef = 7BF6C93F18105D4500895A19 /* AtoZSingleton.xcodeproj */;
 				},
 				{
-					ProductGroup = 7B9D87D1181D219600043489 /* Products */;
-					ProjectRef = 7B9D87D0181D219600043489 /* CollectionsKeyValueFiltering.xcodeproj */;
+					ProductGroup = 7B9A61CE181D825800AEA909 /* Products */;
+					ProjectRef = 7B9A61CD181D825800AEA909 /* CollectionsKeyValueFiltering.xcodeproj */;
 				},
 				{
 					ProductGroup = 7B9D8744181D172700043489 /* Products */;
@@ -488,6 +486,27 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		7B9A61D4181D825800AEA909 /* libCollectionsKeyValueFiltering-ios.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libCollectionsKeyValueFiltering-ios.a";
+			remoteRef = 7B9A61D3181D825800AEA909 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		7B9A61D6181D825800AEA909 /* libCollectionsKeyValueFilteringX.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libCollectionsKeyValueFilteringX.a;
+			remoteRef = 7B9A61D5181D825800AEA909 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		7B9A61D8181D825800AEA909 /* CollectionsKeyValueFilteringTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = CollectionsKeyValueFilteringTests.octest;
+			remoteRef = 7B9A61D7181D825800AEA909 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		7B9D8749181D172800043489 /* Mac_REKit.app */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.application;
@@ -542,27 +561,6 @@
 			fileType = archive.ar;
 			path = libObjcAssociatedObjectHelper.a;
 			remoteRef = 7B9D87C9181D1DA300043489 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		7B9D87D7181D219700043489 /* libCollectionsKeyValueFiltering-ios.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = "libCollectionsKeyValueFiltering-ios.a";
-			remoteRef = 7B9D87D6181D219700043489 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		7B9D87D9181D219700043489 /* libCollectionsKeyValueFiltering-osx.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = "libCollectionsKeyValueFiltering-osx.a";
-			remoteRef = 7B9D87D8181D219700043489 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		7B9D87DB181D219700043489 /* CollectionsKeyValueFilteringTests.octest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = CollectionsKeyValueFilteringTests.octest;
-			remoteRef = 7B9D87DA181D219700043489 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		7B9D87EE181D34F400043489 /* MAObjCRuntime */ = {
@@ -662,6 +660,11 @@
 			name = MAObjCRuntime;
 			targetProxy = 7B9A61B8181D69BA00AEA909 /* PBXContainerItemProxy */;
 		};
+		7B9A61DA181D825E00AEA909 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CollectionsKeyValueFilteringX;
+			targetProxy = 7B9A61D9181D825E00AEA909 /* PBXContainerItemProxy */;
+		};
 		7B9D8797181D1BEA00043489 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = REKit;
@@ -671,11 +674,6 @@
 			isa = PBXTargetDependency;
 			name = ObjcAssociatedObjectHelper;
 			targetProxy = 7B9D87CB181D1DA700043489 /* PBXContainerItemProxy */;
-		};
-		7B9D87DF181D21FC00043489 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "CollectionsKeyValueFiltering-osx";
-			targetProxy = 7B9D87DE181D21FC00043489 /* PBXContainerItemProxy */;
 		};
 		7BF6C94C18105D5600895A19 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scheme
+   LastUpgradeVersion = "0500"
+   version = "1.3">
+   <BuildAction
+      parallelizeBuildables = "YES"
+      buildImplicitDependencies = "YES">
+      <BuildActionEntries>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "7BC4254C1776799C00928201"
+               BuildableName = "libAtoZAutoBox.a"
+               BlueprintName = "AtoZAutoBox"
+               ReferencedContainer = "container:AtoZAutoBox.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+      </BuildActionEntries>
+   </BuildAction>
+   <TestAction
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      shouldUseLaunchSchemeArgsEnv = "NO"
+      buildConfiguration = "Debug">
+      <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "7B78F64B180A670000515A10"
+               BuildableName = "AtoZAutoBoxTests.xctest"
+               BlueprintName = "AtoZAutoBoxTests"
+               ReferencedContainer = "container:AtoZAutoBox.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "0A1F375B1729A6C10003594D"
+               BuildableName = "AtoZSingletonTests.xctest"
+               BlueprintName = "AtoZSingletonTests"
+               ReferencedContainer = "container:../../../git/AtoZSingleton/AtoZSingleton.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "37A80DFD150B8CE800B9B6E1"
+               BuildableName = "CollectionsKeyValueFilteringTests.octest"
+               BlueprintName = "CollectionsKeyValueFilteringTests"
+               ReferencedContainer = "container:ObjcCollectionsKeyValueFiltering/CollectionsKeyValueFiltering.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "7B8B894117FAA68600F366C4"
+               BuildableName = "KVOMapTests.xctest"
+               BlueprintName = "KVOMapTests"
+               ReferencedContainer = "container:../../Frameworks/KeyValueObjectMapping/KeyValueObjectMapping.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "7B5F1C981816C07600329B3E"
+               BuildableName = "MAObjCRuntimeTests.xctest"
+               BlueprintName = "MAObjCRuntimeTests"
+               ReferencedContainer = "container:MAObjCRuntime/xcode/MAObjCRuntime.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "49AEF1581619FB2C009D9F9B"
+               BuildableName = "ObjcAssociatedObjectHelpersTests.xctest"
+               BlueprintName = "ObjcAssociatedObjectHelpersTests"
+               ReferencedContainer = "container:ObjcAssociatedObjectHelpers/ObjcAssociatedObjectHelpers.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "EBA42117167DE1F20052D11E"
+               BuildableName = "Mac_REKitLogicTests.octest"
+               BlueprintName = "Mac_REKitLogicTests"
+               ReferencedContainer = "container:REKit/Mac_REKit/Mac_REKit.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+      </Testables>
+   </TestAction>
+   <LaunchAction
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      launchStyle = "0"
+      useCustomWorkingDirectory = "NO"
+      buildConfiguration = "Debug"
+      ignoresPersistentStateOnLaunch = "NO"
+      debugDocumentVersioning = "YES"
+      allowLocationSimulation = "YES">
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "7BC4254C1776799C00928201"
+            BuildableName = "libAtoZAutoBox.a"
+            BlueprintName = "AtoZAutoBox"
+            ReferencedContainer = "container:AtoZAutoBox.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
+      <AdditionalOptions>
+      </AdditionalOptions>
+   </LaunchAction>
+   <ProfileAction
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      savedToolIdentifier = ""
+      useCustomWorkingDirectory = "NO"
+      buildConfiguration = "Release"
+      debugDocumentVersioning = "YES">
+   </ProfileAction>
+   <AnalyzeAction
+      buildConfiguration = "Debug">
+   </AnalyzeAction>
+   <ArchiveAction
+      buildConfiguration = "Release"
+      revealArchiveInOrganizer = "YES">
+   </ArchiveAction>
+</Scheme>
