@@ -23,14 +23,13 @@ struct CTBlockLiteral {
     // imported variables
 };
 
-enum {
+typedef NS_ENUM(int, CTBlockDescriptionFlags)  {
     CTBlockDescriptionFlagsHasCopyDispose = (1 << 25),
     CTBlockDescriptionFlagsHasCtor = (1 << 26), // helpers have C++ code
     CTBlockDescriptionFlagsIsGlobal = (1 << 28),
     CTBlockDescriptionFlagsHasStret = (1 << 29), // IFF BLOCK_HAS_SIGNATURE
     CTBlockDescriptionFlagsHasSignature = (1 << 30)
 };
-typedef int CTBlockDescriptionFlags;
 
 @interface CTBlockDescription : NSObject
 

@@ -218,7 +218,6 @@
 		7B9D8743181D172700043489 /* Mac_REKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Mac_REKit.xcodeproj; path = REKit/Mac_REKit/Mac_REKit.xcodeproj; sourceTree = "<group>"; };
 		7B9D8783181D1B7300043489 /* Test.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Test.xcconfig; path = REKit/Mac_REKit/Mac_REKitLogicTests/../../../../../xcconfigs/Base/Configurations/Test.xcconfig; sourceTree = SOURCE_ROOT; };
 		7B9D8784181D1B9200043489 /* ObjcAssociatedObjectHelpers.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ObjcAssociatedObjectHelpers.xcodeproj; path = ObjcAssociatedObjectHelpers/ObjcAssociatedObjectHelpers.xcodeproj; sourceTree = "<group>"; };
-		7B9D87CE181D204100043489 /* libffi.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libffi.dylib; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/lib/libffi.dylib; sourceTree = DEVELOPER_DIR; };
 		7B9D87E1181D2E7600043489 /* AtoZAutoBoxTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AtoZAutoBoxTests-Prefix.pch"; sourceTree = "<group>"; };
 		7B9D87E5181D34F300043489 /* MAObjCRuntime.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MAObjCRuntime.xcodeproj; path = MAObjCRuntime/xcode/MAObjCRuntime.xcodeproj; sourceTree = "<group>"; };
 		7B9D880B181D5CD500043489 /* AssociatedObjectHelpers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AssociatedObjectHelpers.h; path = ObjcAssociatedObjectHelpers/ObjcAssociatedObjectHelpers/AssociatedObjectHelpers.h; sourceTree = "<group>"; };
@@ -318,7 +317,6 @@
 			children = (
 				7B9A61CD181D825800AEA909 /* CollectionsKeyValueFiltering.xcodeproj */,
 				7B9D87E5181D34F300043489 /* MAObjCRuntime.xcodeproj */,
-				7B9D87CE181D204100043489 /* libffi.dylib */,
 				7B9D880B181D5CD500043489 /* AssociatedObjectHelpers.h */,
 				7B9D8784181D1B9200043489 /* ObjcAssociatedObjectHelpers.xcodeproj */,
 				7B3A15BF180C7EA600F63F4D /* Mac-StaticLibrary.xcconfig */,
@@ -730,6 +728,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7B3A15BF180C7EA600F63F4D /* Mac-StaticLibrary.xcconfig */;
 			buildSettings = {
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
 				GCC_PREFIX_HEADER = "$(AZPREFIX)";
 				PRODUCT_NAME = AtoZAutoBox;
 			};
@@ -738,6 +737,7 @@
 		7BC425731776799D00928201 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
 				GCC_PREFIX_HEADER = "$(AZPREFIX)";
 				PRODUCT_NAME = AtoZAutoBox;
 			};

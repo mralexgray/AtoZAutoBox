@@ -43,6 +43,16 @@
 			 	 setter:(void(^)(id _self, NSString*key, id value))s;
 @end
 
+
+#define __STR(x) #x
+
+#define PRAGMA(x) _Pragma(__STR(x))
+//#define Q(x) PRAGMA(clang diagnostic push) \
+PRAGMA(clang diagnostic ignored "-Wtautological-compare") \
+Q_ASSERT(x) \
+PRAGMA(clang diagnostic pop)
+
+
 /*	CLANG_IGNORE(-Wuninitialized);
 	Shady Shit
 	CLANG_POP;
