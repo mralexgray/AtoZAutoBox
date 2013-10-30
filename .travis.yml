@@ -1,31 +1,32 @@
-# tell travis that this is an objective-c project
 language: objective-c
-compiler:
-  # - clang
+before_script:
+	- ls
+  - git submodule update --init --recursive
+script: xcodebuild -scheme AtoZAutoBox -configuration Debug test
+
+
+
+# compiler:
+# - clang
 # before_script:
-  # - npm install webvtt
-  # - pwd
-  #
-  # - sudo apt-get update
-  # - sudo apt-get install zzuf
-  # - which zzuf
-  # - which bash
-  # - which sh
+# - npm install webvtt
+# - pwd
+#
+# - sudo apt-get update
+# - sudo apt-get install zzuf
+# - which zzuf
+# - which bash
+# - which sh
 # script: make check-js
 # after_script:
-  # - cd ./fuzz
-  # - chmod -R 777 ./fuzzv2.sh
-  # - ./fuzzv2.sh 0.1
-  # - cat ./fuzzedFiles/good.tc_1009_missing_line_between_cues.vtt.fuzzed.vtt
+# - cd ./fuzz
+# - chmod -R 777 ./fuzzv2.sh
+# - ./fuzzv2.sh 0.1
+# - cat ./fuzzedFiles/good.tc_1009_missing_line_between_cues.vtt.fuzzed.vtt
 # install xcodetest dependencies
-before_install:
-    # ./install_dependencies.sh
-    - git submodule update --init --recursive
-    # - brew update
-    # - brew install xctool
-
+# ./install_dependencies.sh
+# - brew update
+# - brew install xctool
 # build via xcodetest
 # script: ./build_and_run_unit_tests.sh MyApp MyAppTests
 # script: xctool test -project Kiwi.xcodeproj -scheme Kiwi
-
-script: xcodebuild -scheme AtoZAutoBox -configuration Debug test
