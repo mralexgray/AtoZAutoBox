@@ -42,7 +42,7 @@
 
 // 	Here’s one final example bringing everything to do with objects together, showing how to use performSelector:withValue: to call a selector on an object, with an object as an argument and as a return type:
 /*
-UIView *view = [[UIView alloc] init];
+UIView *view = UIView.new;
 void **p = [self performSelector:@selector(strWithView:) withValue:&view];
 NSString *str = (__bridge NSString *)*p;
 NSLog(@"string is %@", str);

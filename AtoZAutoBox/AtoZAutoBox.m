@@ -1,9 +1,9 @@
 
 #import "AtoZAutoBox.h"
 // REKit
-#import "NSObject+REResponder.h"
-#import "NSObject+REObserver.h"
-#import "REUtil.h"
+#import "REKit/NSObject+REResponder.h"
+//#import "NSObject+REObserver.h"
+#import "REKit/REUtil.h"
 
 
 @implementation NSObject (ABOX)	@dynamic box;

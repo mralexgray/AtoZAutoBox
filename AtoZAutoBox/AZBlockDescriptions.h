@@ -5,6 +5,7 @@
 //  Created by Oliver Letterer on 01.09.12.
 //  Copyright (c) 2012 olettere. All rights reserved.
 //
+#import <Foundation/Foundation.h>
 
 struct CTBlockLiteral {
     void *isa; // initialized to &_NSConcreteStackBlock or &_NSConcreteGlobalBlock

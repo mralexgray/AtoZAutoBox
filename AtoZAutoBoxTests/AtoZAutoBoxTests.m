@@ -6,9 +6,9 @@
 //  Copyright (c) 2013 Alex Gray. All rights reserved.
 //
 
-#import <XCTest/XCTest.h>
+#import <SenTestingKit/SenTestingKit.h>
 
-@interface AtoZAutoBoxTests : XCTestCase
+@interface AtoZAutoBoxTests : SenTestCase
 
 @end
 
@@ -28,9 +28,9 @@
     [super tearDown];
 }
 
-//- (void)testExample
-//{
-//    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
-//}
+- (void)testExample
+{
+    STAssertTrue (1==1, @"No implementation for \"%s\"", __PRETTY_FUNCTION__);
+}
 
 @end

@@ -56,7 +56,7 @@
 @end
 @implementation CPropertyFactory
 
-//+ (instancetype) newKinda:(Class)k {	id newK = [[k alloc]init];  return (k*)newK;	}
+//+ (instancetype) newKinda:(Class)k {	id newK = k.new;  return (k*)newK;	}
 
 - (BOOL)configure:(Class)inClass getter:(PGETTER)inGetter setter:(PSETTER)inSetter error:(NSError * *)outError {
 

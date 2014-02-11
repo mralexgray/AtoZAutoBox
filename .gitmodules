@@ -15,3 +15,12 @@
 [submodule "ObjcCollectionsKeyValueFiltering"]
 	path = ObjcCollectionsKeyValueFiltering
 	url = https://github.com/mralexgray/ObjcCollectionsKeyValueFiltering.git
+[submodule "JATemplate"]
+	path = JATemplate
+	url = https://github.com/mralexgray/JATemplate.git
+[submodule "WMGenericCollection"]
+	path = WMGenericCollection
+	url = https://github.com/mralexgray/WMGenericCollection.git
+[submodule "AOPProxy"]
+	path = AOPProxy
+	url = https://github.com/mralexgray/AOP-in-Objective-C.git
